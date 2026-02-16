@@ -1,0 +1,13 @@
+[HEADER]
+id: maze_yeti
+title: The Deep Cave
+
+[CONTENT]
+You navigate the twisting tunnels and find a large cavern.
+You hear heavy breathing.
+
+[OPTIONS]
+enter | Enter the cavern -> ./yeti.level
+
+[DIRECTIVES]
+input_mode: choice

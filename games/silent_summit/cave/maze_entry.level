@@ -1,0 +1,15 @@
+[HEADER]
+id: maze_entry
+title: Ice Maze Entrance
+
+[CONTENT]
+You are safe in the cave. But it is a maze of ice.
+Passages go left, right, and forward.
+
+[OPTIONS]
+left | Go Left -> ./maze_dead_end.level
+right | Go Right -> ./maze_yeti.level
+forward | Go Forward -> ./maze_loop.level
+
+[DIRECTIVES]
+input_mode: choice

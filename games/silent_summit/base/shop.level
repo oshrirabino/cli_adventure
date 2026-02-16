@@ -1,0 +1,17 @@
+[HEADER]
+id: shop
+title: Climbing Shop
+
+[CONTENT]
+"Rope is 10 gold," says the merchant. You have exactly 10 gold.
+Do you buy the rope or leave?
+
+[OPTIONS]
+buy | Buy the rope -> ./village.level
+leave | Leave -> ./village.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=buy add_flag=has_rope

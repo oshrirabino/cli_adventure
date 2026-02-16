@@ -1,0 +1,14 @@
+[HEADER]
+id: cave_island
+title: The Island
+
+[CONTENT]
+You land on the rocky island.
+In the center stands a pedestal with a chest.
+
+[OPTIONS]
+open_chest | Open the chest -> ./treasure.level
+leave | Leave island -> ./lake.level
+
+[DIRECTIVES]
+input_mode: choice

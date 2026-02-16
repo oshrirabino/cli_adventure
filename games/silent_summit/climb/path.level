@@ -1,0 +1,24 @@
+[HEADER]
+id: climb_path
+title: The Snowy Path
+ascii_art: ../art/mountain.txt
+
+[CONTENT]
+The wind howls. The path is steep. You come to a sheer cliff face.
+If you have a rope, you can climb. If not, you must risk the jump.
+
+[OPTIONS]
+climb_rope | Climb with rope -> ./avalanche.level
+jump_risk | Risk the jump -> ../endings/fall_death.level
+jump_safe | Jump safely (Cheat) -> ./cliff_success.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_CONDITIONS]
+option=climb_rope requires_flag=has_rope
+option=jump_risk forbids_flag=has_rope
+option=jump_safe requires_flag=god_mode_cheat (impossible for now)
+
+[MEMORY]
+on_enter add_flag=climbing

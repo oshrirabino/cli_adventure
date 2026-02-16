@@ -10,11 +10,13 @@ add_library(adventure_engine
     src/engine/engine.cpp
     src/levels/choice_level.cpp
     src/levels/end_game_level.cpp
+    src/levels/input_level.cpp
     src/levels/terminal_level_factory.cpp
     src/parser/tag_parser.cpp
     src/ui/renderer.cpp
     src/ui/terminal_menu.cpp
     src/ui/theme.cpp
+    src/validation/game_validator.cpp
 )
 
 target_include_directories(adventure_engine PUBLIC src)
@@ -41,6 +43,10 @@ if(BUILD_TESTING)
     add_executable(choice_level_tests tests/choice_level_tests.cpp)
     target_link_libraries(choice_level_tests PRIVATE adventure_engine)
     add_test(NAME choice_level_tests COMMAND choice_level_tests)
+
+    add_executable(input_level_tests tests/input_level_tests.cpp)
+    target_link_libraries(input_level_tests PRIVATE adventure_engine)
+    add_test(NAME input_level_tests COMMAND input_level_tests)
 
     add_executable(engine_flow_tests tests/engine_flow_tests.cpp)
     target_link_libraries(engine_flow_tests PRIVATE adventure_engine)

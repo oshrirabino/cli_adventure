@@ -7,6 +7,7 @@ The entrance to the cave is jagged and foreboding. A cold wind blows from within
 
 [OPTIONS]
 Enter the dungeon -> ../dungeon/entry.level
+Enter the deep caves -> ../cave/entry.level
 Return to clearing -> ./clearing.level
 
 [DIRECTIVES]

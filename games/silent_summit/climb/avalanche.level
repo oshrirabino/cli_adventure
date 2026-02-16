@@ -1,0 +1,15 @@
+[HEADER]
+id: avalanche
+title: The Avalanche
+ascii_art: ../art/mountain.txt
+
+[CONTENT]
+As you climb, a roar fills the air. Snow rushes down!
+You spot a small cave to the left and a tree to the right.
+
+[OPTIONS]
+cave | Duck into the cave -> ../cave/maze_entry.level
+tree | Grab the tree -> ../endings/buried.level
+
+[DIRECTIVES]
+input_mode: choice

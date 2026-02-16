@@ -4,11 +4,10 @@ title: Reactor Stabilized
 ascii_art: ../art/reactor.txt
 
 [CONTENT]
-With a mighty kick, the lever slams into place. The pulsing slows.
-The lights in the ship flicker and turn bright white. Power is restored!
+The reactor core stabilizes. The lights turn bright white. Power is restored!
 
 [OPTIONS]
-Return to Corridor -> ../corridor/main_hall_powered.level
+return | Return to Corridor -> ../corridor/main_hall_powered.level
 
 [DIRECTIVES]
 input_mode: choice

@@ -1,0 +1,17 @@
+[HEADER]
+id: alien_defeated
+title: Alien Defeated
+ascii_art: ../art/alien.txt
+
+[CONTENT]
+With the Stimpack coursing through your veins, you overpower the creature!
+You grab the Captain's Log before fleeing.
+
+[OPTIONS]
+leave | Leave the bridge -> ../corridor/main_hall.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=leave add_flag=has_log

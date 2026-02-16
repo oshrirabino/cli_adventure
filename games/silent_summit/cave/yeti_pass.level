@@ -1,0 +1,14 @@
+[HEADER]
+id: yeti_pass
+title: The Yeti Nods
+ascii_art: ../art/yeti.txt
+
+[CONTENT]
+The Yeti steps aside. You have proven your wisdom.
+The path to the temple is clear.
+
+[OPTIONS]
+climb | Climb to the peak -> ../temple/gate.level
+
+[DIRECTIVES]
+input_mode: choice

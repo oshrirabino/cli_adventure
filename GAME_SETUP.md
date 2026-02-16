@@ -28,6 +28,7 @@ Supported sections:
 - `[MEMORY]` (optional)
 - `[OPTION_CONDITIONS]` (optional)
 - `[OPTION_EFFECTS]` (optional)
+- `[INPUT_RULES]` (for input mode)
 
 ## Required Level Rules
 
@@ -42,6 +43,15 @@ Supported sections:
   - `[DIRECTIVES]` must include:
     - `input_mode: endgame`
     - `result: victory` or `result: game_over`
+- Input level:
+  - `[DIRECTIVES]` must include:
+    - `input_mode: input`
+  - Must include `[INPUT_RULES]` with at least one rule.
+  - Optional directives:
+    - `input_prompt`
+    - `input_invalid_message`
+    - `input_match` (`contains`/`exact`/`prefix`)
+    - `input_case_sensitive` (`true`/`false`)
 
 ## Memory Rules (Optional)
 
@@ -109,6 +119,17 @@ Example with current games folder:
 ```bash
 ./build/cli_adventure games
 ```
+
+## Main Menu (Launcher)
+
+The program now runs as a launcher with persistent sessions:
+
+- `Play Game`
+- `Settings` (choose active theme)
+- `Validate Games` (scan a game and report format/target issues)
+- `Exit`
+
+When a game session ends, a session-finished screen is shown and the launcher returns to Main Menu after user confirmation.
 
 ## Controls
 

@@ -129,6 +129,22 @@ cut_tree | Cut the tree down -> ./clearing.level
   expect(data.options[0].target == "./clearing.level", "Option target mismatch.");
 }
 
+void test_input_rules_with_id() {
+  const std::string input = R"(
+[INPUT_RULES]
+open_door | open sesame -> ./vault.level
+)";
+
+  adventure::parser::TagParser parser;
+  std::istringstream stream(input);
+  const adventure::parser::ParsedLevelData data = parser.parse(stream);
+
+  expect(data.input_rules.size() == 1, "Expected one parsed input rule.");
+  expect(data.input_rules[0].id == "open_door", "Input rule id mismatch.");
+  expect(data.input_rules[0].pattern == "open sesame", "Input rule pattern mismatch.");
+  expect(data.input_rules[0].target == "./vault.level", "Input rule target mismatch.");
+}
+
 }  // namespace
 
 int main() {
@@ -137,5 +153,6 @@ int main() {
   test_missing_sections();
   test_option_uses_first_delimiter_position();
   test_option_with_explicit_id();
+  test_input_rules_with_id();
   return 0;
 }

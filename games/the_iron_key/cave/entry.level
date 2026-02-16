@@ -1,0 +1,14 @@
+[HEADER]
+id: cave_entry
+title: Cave Entrance
+
+[CONTENT]
+You descend into the deep caves. The air is cold and damp.
+Stalagmites rise from the floor like jagged teeth.
+
+[OPTIONS]
+go_lake | Walk towards the sound of water -> ./lake.level
+go_back | Return to surface -> ../forest/cave_entrance.level
+
+[DIRECTIVES]
+input_mode: choice

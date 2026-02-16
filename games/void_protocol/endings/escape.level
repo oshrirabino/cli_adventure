@@ -7,6 +7,7 @@ ascii_art: ../art/pod.txt
 You strap in. The systems are green.
 3... 2... 1... LAUNCH.
 You blast away from the doomed ship, safe at last.
+(If you retrieved the Captain's Log, you will be hailed as a hero. If not, just a survivor).
 
 [DIRECTIVES]
 input_mode: endgame

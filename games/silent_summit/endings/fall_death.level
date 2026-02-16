@@ -1,0 +1,11 @@
+[HEADER]
+id: fall_death
+title: A Long Fall
+
+[CONTENT]
+You try to jump the gap, but the ice is slippery.
+You fall... and fall...
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

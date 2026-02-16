@@ -13,6 +13,7 @@ Another route squeezes into a cracked wall.
 search_stash | Search the hidden stash -> ./stash.level
 open_gate | Unlock the iron gate -> ./gate.level
 slip_wall | Slip through the cracked wall -> ./tunnels/entry.level
+whisper_wall | Whisper to the cracked wall -> ./riddle.level
 
 [DIRECTIVES]
 input_mode: choice

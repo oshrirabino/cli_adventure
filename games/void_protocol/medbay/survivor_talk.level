@@ -1,0 +1,19 @@
+[HEADER]
+id: survivor_talk
+title: Chief Engineer
+ascii_art: ../art/survivor.txt
+
+[CONTENT]
+"You made it..." she coughs. "The reactor... it's going critical. I tried to override it but the aliens..."
+She winces in pain. "I have the override code... 4-2-7... don't forget it."
+
+[OPTIONS]
+thank | "Thank you. I'll fix it." -> ./entry.level
+ask_alien | "What about the aliens?" -> ./alien_info.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=thank set_value=knows_code:true
+option=ask_alien set_value=knows_code:true

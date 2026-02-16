@@ -10,6 +10,7 @@ To the Right: The Bridge.
 Straight Ahead: Escape Pod Bays.
 
 [OPTIONS]
+Go to Medical Bay -> ../medbay/entry.level
 Go to Engineering -> ../engineering/reactor.level
 Go to the Bridge -> ../bridge/entry.level
 Go to Escape Pods -> ./pods_offline.level

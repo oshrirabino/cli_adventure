@@ -14,6 +14,12 @@ struct LevelOption {
   std::string target;
 };
 
+struct InputRule {
+  std::string id;
+  std::string pattern;
+  std::string target;
+};
+
 struct MemoryMutation {
   enum class Kind {
     kAddFlag,
@@ -44,6 +50,7 @@ struct ParsedLevelData {
   std::unordered_map<std::string, std::string> header;
   std::vector<std::string> content_lines;
   std::vector<LevelOption> options;
+  std::vector<InputRule> input_rules;
   std::unordered_map<std::string, std::string> directives;
   std::vector<MemoryMutation> on_enter_memory;
   std::vector<OptionCondition> option_conditions;

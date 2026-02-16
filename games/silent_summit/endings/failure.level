@@ -1,0 +1,11 @@
+[HEADER]
+id: failure
+title: Failed Mission
+
+[CONTENT]
+"Then why are you here?" asks the Monk.
+You are sent back down in shame.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

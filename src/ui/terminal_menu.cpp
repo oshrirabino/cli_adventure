@@ -253,4 +253,41 @@ MenuSelection pick_option(std::istream& in, std::ostream& out,
   return pick_option_fallback(in, out, options, prompt);
 }
 
+void clear_menu_block(std::istream& in, std::ostream& out, std::size_t rendered_lines) {
+  if (!supports_interactive_menu(in, out) || rendered_lines == 0) {
+    return;
+  }
+
+  out << "\033[" << rendered_lines << "A";
+  for (std::size_t i = 0; i < rendered_lines; ++i) {
+    out << "\033[2K\r";
+    if (i + 1 < rendered_lines) {
+      out << "\033[1B";
+    }
+  }
+  out << "\033[" << (rendered_lines - 1) << "A";
+  out.flush();
+}
+
+void wait_for_continue(std::istream& in, std::ostream& out, const std::string& prompt) {
+  out << "\n" << prompt;
+  out.flush();
+
+  if (supports_interactive_menu(in, out)) {
+    ScopedRawMode raw_mode;
+    while (true) {
+      const Key key = read_key();
+      if (key == Key::kEof || key == Key::kEnter || key == Key::kUp || key == Key::kDown ||
+          key == Key::kUnknown) {
+        break;
+      }
+    }
+    out << "\n";
+    return;
+  }
+
+  std::string line;
+  std::getline(in, line);
+}
+
 }  // namespace adventure::ui

@@ -1,0 +1,10 @@
+[HEADER]
+id: yeti_death
+title: Crushed
+
+[CONTENT]
+You try to fight the Yeti. It does not go well.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

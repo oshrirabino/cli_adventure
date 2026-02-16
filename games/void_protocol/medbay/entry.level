@@ -1,0 +1,16 @@
+[HEADER]
+id: medbay_entry
+title: Medical Bay
+ascii_art: ../art/medkit.txt
+
+[CONTENT]
+The room smells of antiseptic and burnt wiring.
+A survivor lies on a bio-bed, clutching their side. It's the Chief Engineer.
+
+[OPTIONS]
+talk_survivor | Talk to the Engineer -> ./survivor_talk.level
+search_room | Search the cabinets -> ./search.level
+leave | Return to Corridor -> ../corridor/main_hall.level
+
+[DIRECTIVES]
+input_mode: choice

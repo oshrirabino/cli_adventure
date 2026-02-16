@@ -1,0 +1,15 @@
+[HEADER]
+id: temple_gate
+title: Temple Gate
+ascii_art: ../art/temple.txt
+
+[CONTENT]
+You stand before the Cloud Temple.
+A monk awaits. "Do you have the scroll?"
+
+[OPTIONS]
+yes | "Yes, I do." -> ../endings/victory.level
+no | "No, I lost it." -> ../endings/failure.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -1,0 +1,13 @@
+[HEADER]
+id: maze_loop
+title: Strange Room
+
+[CONTENT]
+This room looks familiar... wait, it's the entrance again?
+(You walked in a circle).
+
+[OPTIONS]
+continue | Continue -> ./maze_entry.level
+
+[DIRECTIVES]
+input_mode: choice

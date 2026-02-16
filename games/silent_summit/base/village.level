@@ -1,0 +1,16 @@
+[HEADER]
+id: village
+title: Base Village
+ascii_art: ../art/mountain.txt
+
+[CONTENT]
+The village is bustling with climbers preparing for the ascent.
+You can ask about the path, buy supplies, or start your climb.
+
+[OPTIONS]
+ask | Ask about the path -> ./elder_talk.level
+buy | Buy supplies -> ./shop.level
+start | Start your climb -> ../climb/path.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -1,0 +1,17 @@
+[HEADER]
+id: alien_info
+title: Alien Warning
+ascii_art: ../art/survivor.txt
+
+[CONTENT]
+"They hunt by sound," she whispers. "If you see one, stay quiet. Or find a weapon."
+She passes out from exhaustion.
+
+[OPTIONS]
+back | Leave her to rest -> ./entry.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=back add_flag=knows_alien_weakness

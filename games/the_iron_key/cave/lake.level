@@ -1,0 +1,15 @@
+[HEADER]
+id: cave_lake
+title: Underground Lake
+
+[CONTENT]
+A vast black lake stretches before you. In the center, a small island glows with a faint light.
+There is a small, rickety boat here.
+
+[OPTIONS]
+row_island | Row to the island -> ./island.level
+row_shore | Row to the far shore -> ./shore.level
+go_back | Go back to entrance -> ./entry.level
+
+[DIRECTIVES]
+input_mode: choice

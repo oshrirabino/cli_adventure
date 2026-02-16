@@ -1,0 +1,10 @@
+[HEADER]
+id: buried
+title: Buried Alive
+
+[CONTENT]
+You cling to the tree, but the snow is too heavy. It sweeps you away.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

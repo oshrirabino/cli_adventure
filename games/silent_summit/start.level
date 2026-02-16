@@ -1,0 +1,17 @@
+[HEADER]
+id: start
+title: The Silent Summit
+ascii_art: ./art/mountain.txt
+
+[CONTENT]
+You are a messenger from the Lowlands. You carry a sealed scroll for the Monks of the High Peak.
+The journey will be perilous.
+
+[OPTIONS]
+Enter the Village -> ./base/village.level
+
+[DIRECTIVES]
+input_mode: choice
+on_enter: clear_flag=has_rope
+on_enter: clear_flag=met_elder
+on_enter: erase_value=riddle_clue

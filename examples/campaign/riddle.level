@@ -1,0 +1,21 @@
+[HEADER]
+id: riddle_wall
+title: Whispering Wall
+
+[CONTENT]
+Runes glow across the cracked wall.
+A voice asks: "Speak the hidden word."
+
+[DIRECTIVES]
+input_mode: input
+input_prompt: Type your answer:
+input_invalid_message: The runes stay dark. Try again.
+input_match: exact
+input_case_sensitive: false
+
+[INPUT_RULES]
+say_friend | friend -> ./tunnels/entry.level
+say_anything | surrender -> ./gate.level
+
+[OPTION_EFFECTS]
+option=say_friend add_flag=wall_opened

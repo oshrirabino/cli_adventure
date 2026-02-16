@@ -21,6 +21,8 @@ struct MenuSelection {
 MenuSelection pick_option(std::istream& in, std::ostream& out,
                           const std::vector<std::string>& options, const std::string& prompt,
                           const Theme& theme);
+void clear_menu_block(std::istream& in, std::ostream& out, std::size_t rendered_lines);
+void wait_for_continue(std::istream& in, std::ostream& out, const std::string& prompt);
 
 }  // namespace adventure::ui
 

@@ -1,0 +1,10 @@
+[HEADER]
+id: death_guardian
+title: Crushed by Stone
+
+[CONTENT]
+The stone guardian smashes its fist down. You are flattened.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

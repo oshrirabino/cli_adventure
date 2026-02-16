@@ -9,8 +9,13 @@ Standing over the captain's chair is a shadowy creature. It turns to you.
 It hisses.
 
 [OPTIONS]
-Fight it! -> ../endings/death_alien.level
-Run! -> ../corridor/main_hall.level
+fight | Fight it! -> ../endings/death_alien.level
+fight_stim | Fight it (with Stimpack)! -> ./alien_defeated.level
+run | Run! -> ../corridor/main_hall.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=fight forbids_flag=has_stimpack
+option=fight_stim requires_flag=has_stimpack

@@ -1,0 +1,13 @@
+[HEADER]
+id: cliff_success
+title: Above the Cliff
+
+[CONTENT]
+You made it up the cliff. Ahead lies the Ice Cave.
+You hear heavy breathing inside.
+
+[OPTIONS]
+enter | Enter the cave -> ../cave/yeti.level
+
+[DIRECTIVES]
+input_mode: choice

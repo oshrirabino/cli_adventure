@@ -1,0 +1,12 @@
+[HEADER]
+id: victory
+title: Mission Accomplished
+ascii_art: ../art/temple.txt
+
+[CONTENT]
+The Monk accepts the scroll. "You have saved the order."
+The Silent Summit is at peace.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

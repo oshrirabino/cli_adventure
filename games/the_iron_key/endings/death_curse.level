@@ -1,0 +1,11 @@
+[HEADER]
+id: death_curse
+title: Cursed!
+
+[CONTENT]
+The witch cackles as your body twists and shrinks. You are now a toad.
+Ribbit.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

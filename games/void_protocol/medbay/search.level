@@ -1,0 +1,17 @@
+[HEADER]
+id: search_medbay
+title: Medical Cabinets
+ascii_art: ../art/medkit.txt
+
+[CONTENT]
+Most of the supplies are gone. You find a Stimpack. It might boost your strength.
+
+[OPTIONS]
+take_stim | Take Stimpack -> ./entry.level
+leave_stim | Leave it -> ./entry.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=take_stim add_flag=has_stimpack

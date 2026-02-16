@@ -134,6 +134,65 @@ result: victory
 
 If a choice level has no options, the engine treats it as a game-structure error and ends the run.
 
+### Input levels (free text mode)
+
+Use `input_mode: input` and define `[INPUT_RULES]`.
+
+Example:
+
+```text
+[HEADER]
+title: Riddle Door
+
+[CONTENT]
+A stone face asks for a password.
+
+[DIRECTIVES]
+input_mode: input
+input_prompt: Type password:
+input_invalid_message: Wrong. Try again.
+input_match: exact
+input_case_sensitive: false
+
+[INPUT_RULES]
+open | open sesame -> ./vault.level
+leave | back -> ./hall.level
+```
+
+`input_match` supports:
+
+- `contains` (default)
+- `exact`
+- `prefix`
+
+`[OPTION_CONDITIONS]` and `[OPTION_EFFECTS]` also work for `INPUT_RULES` IDs.
+
+### Input mode: correct usage checklist
+
+1. Always set:
+   - `[DIRECTIVES]`
+   - `input_mode: input`
+2. Always provide at least one rule in `[INPUT_RULES]`.
+3. Prefer explicit rule IDs:
+   - `rule_id | pattern -> ./target.level`
+4. Choose the right `input_match`:
+   - `exact` for passwords/riddles (`friend`)
+   - `prefix` for command-style input (`open door`, `open chest`)
+   - `contains` for loose matching (default)
+5. Set `input_case_sensitive: false` unless strict case is intended.
+6. Add a helpful `input_invalid_message` so players know to retry.
+7. Ensure every target file exists.
+8. If using memory logic, reference existing rule IDs in:
+   - `[OPTION_CONDITIONS]` with `option=<rule_id>`
+   - `[OPTION_EFFECTS]` with `option=<rule_id>`
+
+### Common mistakes to avoid
+
+- Missing `[INPUT_RULES]` on an input level.
+- Using `exact` with multi-word free text when player wording may vary.
+- Referencing unknown rule IDs in conditions/effects.
+- Forgetting to route at least one rule to a valid level file.
+
 ## 3. Build Your First Simple Game
 
 1. Create `start.level` with two choices.
@@ -179,6 +238,15 @@ Use custom games directory + custom theme:
 ./build/cli_adventure <games_directory> --theme <theme_file>
 ```
 
+The launcher opens a Main Menu with:
+
+- `Play Game`
+- `Settings` (switch theme)
+- `Validate Games` (format/link checks for game creators)
+- `Exit`
+
+After a play session finishes, a session-finished frame is shown and then control returns to Main Menu.
+
 When running in a real terminal:
 - Use Up/Down arrow keys to move.
 - Press Enter to select.
@@ -213,3 +281,5 @@ You can also run with a custom theme file:
 - Every ending uses `input_mode: endgame`.
 - Every ending has `result: victory` or `result: game_over`.
 - Optional: `ascii_art` files exist for levels that reference them.
+
+You can also use launcher menu `Validate Games` for automatic checks.

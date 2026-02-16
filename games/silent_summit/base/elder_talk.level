@@ -1,0 +1,17 @@
+[HEADER]
+id: elder_talk
+title: Village Elder
+
+[CONTENT]
+The Elder looks at you. "The Yeti guards the pass. He respects only silence and wisdom."
+"Remember this: The answer to the Yeti's riddle is 'echo'."
+
+[OPTIONS]
+ok | "Thank you." -> ./village.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=ok set_value=riddle_clue:echo
+option=ok add_flag=met_elder

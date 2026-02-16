@@ -2,6 +2,7 @@
 
 #include "levels/choice_level.h"
 #include "levels/end_game_level.h"
+#include "levels/input_level.h"
 
 namespace adventure::levels {
 
@@ -13,6 +14,9 @@ std::unique_ptr<ILevel> TerminalLevelFactory::create(
   const auto mode_it = data.directives.find("input_mode");
   if (mode_it != data.directives.end() && mode_it->second == "endgame") {
     return std::make_unique<EndGameLevel>(data, renderer_);
+  }
+  if (mode_it != data.directives.end() && mode_it->second == "input") {
+    return std::make_unique<InputLevel>(data, renderer_);
   }
 
   if (mode_it == data.directives.end() || mode_it->second == "choice") {

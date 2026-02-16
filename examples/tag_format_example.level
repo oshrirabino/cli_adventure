@@ -28,3 +28,6 @@ option=open_gate requires_flag=got_iron_key
 
 [OPTION_EFFECTS]
 option=search_stash add_flag=searched_stash
+
+[INPUT_RULES]
+say_friend | friend -> ./gate.level

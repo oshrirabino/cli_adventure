@@ -17,6 +17,7 @@ enum class Section {
   kHeader,
   kContent,
   kOptions,
+  kInputRules,
   kDirectives,
   kMemory,
   kOptionConditions,
@@ -69,6 +70,9 @@ Section section_from_name(const std::string& section_name) {
   if (section_name == "OPTIONS") {
     return Section::kOptions;
   }
+  if (section_name == "INPUT_RULES") {
+    return Section::kInputRules;
+  }
   if (section_name == "DIRECTIVES") {
     return Section::kDirectives;
   }
@@ -101,8 +105,7 @@ bool split_option(const std::string& line, std::string* id, std::string* text, s
   std::size_t pos = std::string::npos;
   std::size_t separator_size = 0;
 
-  if (arrow != std::string::npos &&
-      (fat_arrow == std::string::npos || arrow < fat_arrow)) {
+  if (arrow != std::string::npos && (fat_arrow == std::string::npos || arrow < fat_arrow)) {
     pos = arrow;
     separator_size = 2;
   } else if (fat_arrow != std::string::npos) {
@@ -315,6 +318,15 @@ ParsedLevelData TagParser::parse(std::istream& input) const {
         std::string target;
         if (split_option(line, &id, &text, &target)) {
           data.options.push_back(LevelOption{id, text, target});
+        }
+        break;
+      }
+      case Section::kInputRules: {
+        std::string id;
+        std::string pattern;
+        std::string target;
+        if (split_option(line, &id, &pattern, &target)) {
+          data.input_rules.push_back(InputRule{id, pattern, target});
         }
         break;
       }

@@ -1,0 +1,21 @@
+[HEADER]
+id: yeti_encounter
+title: The Yeti's Lair
+ascii_art: ../art/yeti.txt
+
+[CONTENT]
+A massive Yeti blocks the way!
+"I have no voice, but I cry. I have no wings, but I fly. What am I?"
+(Type your answer below)
+
+[DIRECTIVES]
+input_mode: input
+input_match: exact
+input_case_sensitive: false
+input_prompt: Answer the riddle:
+
+[INPUT_RULES]
+echo | echo -> ./yeti_pass.level
+wind | wind -> ./yeti_pass.level
+fight | fight -> ../endings/yeti_death.level
+run | run -> ../climb/cliff_success.level

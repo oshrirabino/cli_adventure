@@ -1,0 +1,12 @@
+[HEADER]
+id: maze_dead_end
+title: Dead End
+
+[CONTENT]
+A wall of ice blocks your path. You must go back.
+
+[OPTIONS]
+back | Go Back -> ./maze_entry.level
+
+[DIRECTIVES]
+input_mode: choice

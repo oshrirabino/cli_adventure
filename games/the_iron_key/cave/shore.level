@@ -1,0 +1,13 @@
+[HEADER]
+id: shore
+title: The Far Shore
+
+[CONTENT]
+You stand on the far shore of the underground lake. A rough ladder is carved into the rock wall, leading up into darkness.
+
+[OPTIONS]
+climb_up | Climb the ladder -> ../dungeon/entry.level
+row_back | Row back to the other side -> ./entry.level
+
+[DIRECTIVES]
+input_mode: choice
