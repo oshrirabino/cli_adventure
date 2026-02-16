@@ -1,0 +1,14 @@
+[HEADER]
+id: pods_offline
+title: Escape Pod Bay
+ascii_art: ../art/pod.txt
+
+[CONTENT]
+You scramble into a pod, but the launch controls are dead.
+SCREEN: "ERROR. INSUFFICIENT POWER. REACTOR OFFLINE."
+
+[OPTIONS]
+Return to Corridor -> ./main_hall.level
+
+[DIRECTIVES]
+input_mode: choice

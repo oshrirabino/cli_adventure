@@ -1,0 +1,16 @@
+[HEADER]
+id: start
+title: Cell Block A
+ascii_art: ./art/cell.txt
+
+[CONTENT]
+You wake in a damp stone cell lit by pale moonlight.
+One route leads to the gate.
+Another route squeezes into a cracked wall.
+
+[OPTIONS]
+Approach the iron gate -> ./gate.level
+Slip through the cracked wall -> ./tunnels/entry.level
+
+[DIRECTIVES]
+input_mode: choice

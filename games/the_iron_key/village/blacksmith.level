@@ -1,0 +1,14 @@
+[HEADER]
+id: blacksmith
+title: Blacksmith Shop
+
+[CONTENT]
+The heat is intense here. The blacksmith is hammering a red-hot sword.
+
+[OPTIONS]
+Talk to blacksmith -> ./smith_talk.level
+Look at weapons -> ./weapons.level
+Leave shop -> ./town_square.level
+
+[DIRECTIVES]
+input_mode: choice

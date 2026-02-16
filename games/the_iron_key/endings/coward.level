@@ -1,0 +1,10 @@
+[HEADER]
+id: coward
+title: A Quiet Life
+
+[CONTENT]
+You turn your back on adventure and return home. You live a long, safe, and boring life.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

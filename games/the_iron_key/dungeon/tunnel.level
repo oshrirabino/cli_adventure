@@ -1,0 +1,13 @@
+[HEADER]
+id: tunnel
+title: Long Tunnel
+
+[CONTENT]
+The tunnel seems endless. Suddenly, you hear a click beneath your feet.
+
+[OPTIONS]
+Freeze! -> ../endings/crushed.level
+Jump forward! -> ./hall.level
+
+[DIRECTIVES]
+input_mode: choice

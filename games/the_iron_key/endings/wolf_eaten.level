@@ -1,0 +1,10 @@
+[HEADER]
+id: wolf_eaten
+title: Eaten by Wolves
+
+[CONTENT]
+You try to fight the wolves, but there are too many. They overwhelm you. This is the end of your adventure.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

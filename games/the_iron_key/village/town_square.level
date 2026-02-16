@@ -1,0 +1,14 @@
+[HEADER]
+id: town_square
+title: Oakhaven Town Square
+
+[CONTENT]
+The village is quiet. A few villagers go about their business. You see a cozy tavern with smoke rising from its chimney and a blacksmith shop clanging with the sound of metal on metal.
+
+[OPTIONS]
+Enter the Tavern -> ./tavern.level
+Visit the Blacksmith -> ./blacksmith.level
+Return to the road -> ../start.level
+
+[DIRECTIVES]
+input_mode: choice

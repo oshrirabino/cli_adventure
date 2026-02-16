@@ -1,0 +1,12 @@
+[HEADER]
+id: smith_talk
+title: The Smith
+
+[CONTENT]
+"I can't make you a key," the smith grunts. "But take this old dagger. It might help you in the forest."
+
+[OPTIONS]
+Take dagger -> ./blacksmith.level
+
+[DIRECTIVES]
+input_mode: choice

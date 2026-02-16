@@ -1,0 +1,10 @@
+[HEADER]
+id: wizard_fall
+title: Gravity Wins
+
+[CONTENT]
+You charge and shove the Wizard. He teeters and falls, screaming all the way down. Not elegant, but effective.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

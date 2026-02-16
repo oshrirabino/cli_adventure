@@ -1,0 +1,12 @@
+[HEADER]
+id: weapons
+title: Weapon Rack
+
+[CONTENT]
+The rack is full of swords and axes. They look heavy and expensive. You can't afford them.
+
+[OPTIONS]
+Back to shop -> ./blacksmith.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -1,0 +1,15 @@
+[HEADER]
+id: start
+title: Cryo Bay 4
+ascii_art: ./art/cryo.txt
+
+[CONTENT]
+Hiss... The cryo lid opens. Cold air rushes into your lungs.
+The ship is dark. Emergency lights pulse red.
+You are in the Cryo Bay.
+
+[OPTIONS]
+Step out into the corridor -> ./corridor/main_hall.level
+
+[DIRECTIVES]
+input_mode: choice

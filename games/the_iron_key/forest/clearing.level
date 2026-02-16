@@ -1,0 +1,14 @@
+[HEADER]
+id: clearing
+title: Moonlit Clearing
+
+[CONTENT]
+A break in the trees reveals a clearing lit by the moon. In the center is a strange stone altar. To the north, you see a dark opening in the rock face.
+
+[OPTIONS]
+Examine the altar -> ./altar.level
+Enter the cave -> ./cave_entrance.level
+Go back to path -> ./path.level
+
+[DIRECTIVES]
+input_mode: choice

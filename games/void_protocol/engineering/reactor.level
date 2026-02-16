@@ -1,0 +1,16 @@
+[HEADER]
+id: reactor
+title: Reactor Core
+ascii_art: ../art/reactor.txt
+
+[CONTENT]
+The core is pulsing violently. Radiation levels are rising.
+A manual override lever is stuck.
+
+[OPTIONS]
+Kick the lever (Force it) -> ./reactor_fixed.level
+Try to calibrate computer (Technical) -> ../endings/death_explosion.level
+Run away -> ../corridor/main_hall.level
+
+[DIRECTIVES]
+input_mode: choice

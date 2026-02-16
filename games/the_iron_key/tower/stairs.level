@@ -1,0 +1,14 @@
+[HEADER]
+id: stairs
+title: Spiral Stairs
+
+[CONTENT]
+The climb is exhausting. You pass a laboratory filled with bubbling potions.
+
+[OPTIONS]
+Enter the laboratory -> ./lab.level
+Keep climbing to the top -> ./roof.level
+Go down -> ./entrance.level
+
+[DIRECTIVES]
+input_mode: choice

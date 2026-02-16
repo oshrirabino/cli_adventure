@@ -1,0 +1,12 @@
+[HEADER]
+id: barkeep
+title: The Barkeep
+
+[CONTENT]
+"We don't get many adventurers here," the barkeep says. "If you're looking for trouble, try the forest. But if you're looking for the Iron Key, old legends say it was lost in the caves beneath the woods."
+
+[OPTIONS]
+Go back -> ./tavern.level
+
+[DIRECTIVES]
+input_mode: choice

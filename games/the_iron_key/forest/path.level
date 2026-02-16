@@ -1,0 +1,14 @@
+[HEADER]
+id: forest_path
+title: Ebonwood Path
+
+[CONTENT]
+The forest is dark and the trees are twisted. Strange noises come from all directions. The path splits ahead.
+
+[OPTIONS]
+Go towards the clearing -> ./clearing.level
+Investigate the howling -> ./wolf.level
+Return to the road -> ../start.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -1,0 +1,15 @@
+[HEADER]
+id: main_hall_powered
+title: Main Corridor (Power Online)
+ascii_art: ../art/hallway.txt
+
+[CONTENT]
+The corridor is now fully lit. The alarm has stopped.
+Systems are coming back online.
+
+[OPTIONS]
+Go to Escape Pods (Launch Ready) -> ../endings/escape.level
+Go to the Bridge -> ../bridge/entry.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -1,0 +1,13 @@
+[HEADER]
+id: death_explosion
+title: Meltdown
+ascii_art: ../art/reactor.txt
+
+[CONTENT]
+You type furiously at the computer, but it's too late.
+The core goes critical.
+BOOM.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

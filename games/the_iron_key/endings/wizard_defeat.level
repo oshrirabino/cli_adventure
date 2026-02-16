@@ -1,0 +1,10 @@
+[HEADER]
+id: wizard_defeat
+title: Bound by Magic
+
+[CONTENT]
+You recite the binding spell. Chains of light wrap around the Wizard. He screams as he is sealed away. You have saved the realm!
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

@@ -1,0 +1,13 @@
+[HEADER]
+id: cellar
+title: Musty Cellar
+
+[CONTENT]
+The cellar is dark and filled with barrels. In the corner, you see a small, rusty lockbox.
+
+[OPTIONS]
+Open the lockbox -> ./lockbox.level
+Go back upstairs -> ./tavern.level
+
+[DIRECTIVES]
+input_mode: choice

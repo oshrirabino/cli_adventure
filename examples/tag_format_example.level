@@ -1,0 +1,24 @@
+[HEADER]
+id: intro_start
+title: Cell Block A
+author: sample
+
+[CONTENT]
+You open your eyes in a damp stone cell.
+Moonlight cuts through iron bars.
+
+Two exits stand out: a locked gate and a cracked wall.
+
+[OPTIONS]
+Examine the gate -> ./gate.level
+Push through the cracked wall -> ../tunnels/entry.level
+Call out to the guard => ./guard_reply.level
+
+[DIRECTIVES]
+input_mode: choice
+ascii: ../assets/cell.txt
+on_enter: play_sfx=drip
+
+[MEMORY]
+set: event.cell_intro_seen=true
+flag: intro.started

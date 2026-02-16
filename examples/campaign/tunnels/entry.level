@@ -1,0 +1,11 @@
+[HEADER]
+id: tunnels_entry
+title: Hidden Tunnels
+
+[CONTENT]
+You crawl into a tunnel and find a ladder to the surface.
+The city lights are visible beyond the hatch.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

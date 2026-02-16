@@ -1,0 +1,12 @@
+[HEADER]
+id: magic_trap
+title: Magical Trap!
+
+[CONTENT]
+You touch the runes and a burst of energy knocks you back. You feel drained but alive.
+
+[OPTIONS]
+Shake it off -> ./clearing.level
+
+[DIRECTIVES]
+input_mode: choice

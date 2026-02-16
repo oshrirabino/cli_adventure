@@ -1,0 +1,14 @@
+[HEADER]
+id: dungeon_entry
+title: Damp Dungeon
+
+[CONTENT]
+The air in the dungeon is thick and smells of mold. Water drips from the ceiling. A long tunnel stretches ahead.
+
+[OPTIONS]
+Walk down the tunnel -> ./tunnel.level
+Inspect the walls -> ./secret_passage.level
+Turn back -> ../forest/clearing.level
+
+[DIRECTIVES]
+input_mode: choice

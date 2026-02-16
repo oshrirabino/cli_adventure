@@ -1,0 +1,13 @@
+[HEADER]
+id: pods_online
+title: Escape Pod Launch
+ascii_art: ../art/pod.txt
+
+[CONTENT]
+You strap in. The systems are green.
+3... 2... 1... LAUNCH.
+You blast away from the doomed ship, safe at last.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

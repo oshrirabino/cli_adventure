@@ -1,0 +1,12 @@
+[HEADER]
+id: lockbox
+title: Old Lockbox
+
+[CONTENT]
+You pry open the box. Inside is a strange, glowing gem. It's not the Iron Key, but it looks valuable. You take it.
+
+[OPTIONS]
+Return to cellar -> ./cellar.level
+
+[DIRECTIVES]
+input_mode: choice

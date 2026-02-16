@@ -1,0 +1,14 @@
+[HEADER]
+id: roof
+title: Tower Roof
+
+[CONTENT]
+The Dark Wizard stands at the edge, chanting a spell. He turns to face you, eyes glowing with malice.
+
+[OPTIONS]
+Attack him directly -> ../endings/wizard_victory.level
+Use the spell you learned -> ../endings/wizard_defeat.level
+Push him off the edge -> ../endings/wizard_fall.level
+
+[DIRECTIVES]
+input_mode: choice

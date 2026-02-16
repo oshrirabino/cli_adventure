@@ -1,0 +1,12 @@
+[HEADER]
+id: death_alien
+title: Consumed
+ascii_art: ../art/alien.txt
+
+[CONTENT]
+You raise your fists, but the creature is too fast.
+It lunges...
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

@@ -1,0 +1,14 @@
+[HEADER]
+id: tavern
+title: The Rusty Mug Tavern
+
+[CONTENT]
+The tavern is warm and smells of ale and stew. The barkeep is wiping a glass. There is a door leading down to the cellar, slightly ajar.
+
+[OPTIONS]
+Talk to the barkeep -> ./barkeep.level
+Go to the cellar -> ./cellar.level
+Leave the tavern -> ./town_square.level
+
+[DIRECTIVES]
+input_mode: choice

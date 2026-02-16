@@ -1,0 +1,12 @@
+[HEADER]
+id: spellbook
+title: The Grimoire
+
+[CONTENT]
+You read a spell of binding. You feel power surging through you. This might help against the Wizard.
+
+[OPTIONS]
+Close the book -> ./library.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -1,0 +1,18 @@
+[HEADER]
+id: main_hall
+title: Main Corridor (Emergency Power)
+ascii_art: ../art/hallway.txt
+
+[CONTENT]
+The corridor stretches out. It's dimly lit.
+To the Left: Engineering (Reactor Status: CRITICAL).
+To the Right: The Bridge.
+Straight Ahead: Escape Pod Bays.
+
+[OPTIONS]
+Go to Engineering -> ../engineering/reactor.level
+Go to the Bridge -> ../bridge/entry.level
+Go to Escape Pods -> ./pods_offline.level
+
+[DIRECTIVES]
+input_mode: choice

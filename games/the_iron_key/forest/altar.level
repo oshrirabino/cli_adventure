@@ -1,0 +1,13 @@
+[HEADER]
+id: altar
+title: Stone Altar
+
+[CONTENT]
+The altar is ancient. There are faint runes glowing on its surface. It seems to react to your presence.
+
+[OPTIONS]
+Touch the runes -> ./magic_trap.level
+Leave it alone -> ./clearing.level
+
+[DIRECTIVES]
+input_mode: choice

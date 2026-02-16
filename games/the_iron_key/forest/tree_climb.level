@@ -1,0 +1,12 @@
+[HEADER]
+id: tree_climb
+title: Up a Tree
+
+[CONTENT]
+You scramble up a tree just as the wolves snap at your heels. They circle below for a while before losing interest and wandering off.
+
+[OPTIONS]
+Climb down -> ./path.level
+
+[DIRECTIVES]
+input_mode: choice

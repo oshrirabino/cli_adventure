@@ -1,0 +1,11 @@
+[HEADER]
+id: gate
+title: Locked Gate
+
+[CONTENT]
+You inspect the gate and find no weak point.
+A guard notices movement and raises the alarm.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

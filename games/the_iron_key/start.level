@@ -1,0 +1,14 @@
+[HEADER]
+id: start
+title: The Dusty Road
+
+[CONTENT]
+You stand on a dusty road. Before you lies the sleepy village of Oakhaven. To the north, the dark Ebonwood Forest looms ominously. You have heard rumors of an Iron Key lost somewhere in these lands, said to unlock the Wizard's Tower.
+
+[OPTIONS]
+Enter Oakhaven -> ./village/town_square.level
+Enter Ebonwood Forest -> ./forest/path.level
+Leave the adventure -> ./endings/coward.level
+
+[DIRECTIVES]
+input_mode: choice

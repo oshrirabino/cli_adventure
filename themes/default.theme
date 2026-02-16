@@ -1,0 +1,17 @@
+# CLI Adventure Theme
+# Edit these values to quickly restyle the terminal UI.
+
+use_color = true
+
+border_line = ============================================================
+menu_selected_prefix = ->
+menu_unselected_prefix = >
+
+title_color = bright_cyan
+body_color = default
+prompt_color = bright_yellow
+selected_color = bright_green
+unselected_color = default
+victory_color = bright_green
+game_over_color = bright_red
+error_color = bright_red

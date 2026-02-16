@@ -1,0 +1,12 @@
+[HEADER]
+id: red_potion
+title: Strength Potion
+
+[CONTENT]
+You feel incredibly strong!
+
+[OPTIONS]
+Return to lab -> ./lab.level
+
+[DIRECTIVES]
+input_mode: choice

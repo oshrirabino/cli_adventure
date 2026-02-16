@@ -1,0 +1,16 @@
+[HEADER]
+id: bridge
+title: The Bridge
+ascii_art: ../art/alien.txt
+
+[CONTENT]
+You enter the bridge. It's destroyed.
+Standing over the captain's chair is a shadowy creature. It turns to you.
+It hisses.
+
+[OPTIONS]
+Fight it! -> ../endings/death_alien.level
+Run! -> ../corridor/main_hall.level
+
+[DIRECTIVES]
+input_mode: choice

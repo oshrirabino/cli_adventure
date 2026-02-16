@@ -1,0 +1,10 @@
+[HEADER]
+id: ghost_death
+title: Spectral Touch
+
+[CONTENT]
+Your weapon passes through the ghost. It reaches out and touches your heart, stopping it instantly.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

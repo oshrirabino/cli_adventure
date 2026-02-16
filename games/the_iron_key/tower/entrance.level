@@ -1,0 +1,14 @@
+[HEADER]
+id: tower_entrance
+title: Tower Base
+
+[CONTENT]
+The air hums with magical energy. Spiral stairs wind upwards. A door leads to a library.
+
+[OPTIONS]
+Climb the stairs -> ./stairs.level
+Enter the library -> ./library.level
+Return to dungeon -> ../dungeon/hall.level
+
+[DIRECTIVES]
+input_mode: choice

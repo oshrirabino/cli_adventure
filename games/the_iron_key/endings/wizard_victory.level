@@ -1,0 +1,10 @@
+[HEADER]
+id: wizard_victory
+title: Dark Magic
+
+[CONTENT]
+The Wizard laughs and blasts you with a bolt of lightning. Your journey ends here.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

@@ -1,0 +1,14 @@
+[HEADER]
+id: lab
+title: Alchemist's Lab
+
+[CONTENT]
+Potions of all colors line the tables. Some look volatile.
+
+[OPTIONS]
+Drink a red potion -> ./red_potion.level
+Drink a blue potion -> ../endings/poisoned.level
+Leave -> ./stairs.level
+
+[DIRECTIVES]
+input_mode: choice

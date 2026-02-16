@@ -1,0 +1,12 @@
+[HEADER]
+id: run_away
+title: Escaping the Wolves
+
+[CONTENT]
+You sprint back towards the path, your heart pounding. The wolves give chase but you manage to lose them in the thick brush.
+
+[OPTIONS]
+Catch your breath -> ./path.level
+
+[DIRECTIVES]
+input_mode: choice

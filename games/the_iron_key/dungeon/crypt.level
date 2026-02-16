@@ -1,0 +1,14 @@
+[HEADER]
+id: crypt
+title: The Forgotten Crypt
+
+[CONTENT]
+Sarcophagi are scattered around. A cold presence fills the room. A ghostly figure materializes.
+
+[OPTIONS]
+Attack the ghost -> ../endings/ghost_death.level
+Run back to the hall -> ./hall.level
+Speak to the ghost -> ./ghost_talk.level
+
+[DIRECTIVES]
+input_mode: choice

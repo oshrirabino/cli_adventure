@@ -1,0 +1,14 @@
+[HEADER]
+id: wolf
+title: Wolf Attack!
+
+[CONTENT]
+You stumble upon a pack of wolves! Their leader, a massive beast with glowing eyes, snarls at you.
+
+[OPTIONS]
+Fight with bare hands -> ../endings/wolf_eaten.level
+Run for your life -> ./run_away.level
+Climb a tree -> ./tree_climb.level
+
+[DIRECTIVES]
+input_mode: choice

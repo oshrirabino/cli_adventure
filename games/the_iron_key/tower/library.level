@@ -1,0 +1,13 @@
+[HEADER]
+id: library
+title: Ancient Library
+
+[CONTENT]
+Shelves upon shelves of dusty tomes. One book lies open on a lectern.
+
+[OPTIONS]
+Read the open book -> ./spellbook.level
+Go back to entrance -> ./entrance.level
+
+[DIRECTIVES]
+input_mode: choice

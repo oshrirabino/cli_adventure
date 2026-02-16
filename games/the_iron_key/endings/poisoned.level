@@ -1,0 +1,10 @@
+[HEADER]
+id: blue_potion
+title: Poison!
+
+[CONTENT]
+It was poison! You choke and fall.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

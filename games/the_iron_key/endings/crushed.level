@@ -1,0 +1,10 @@
+[HEADER]
+id: trap_triggered
+title: Trap!
+
+[CONTENT]
+A massive stone block falls from the ceiling, crushing everything beneath it.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over
