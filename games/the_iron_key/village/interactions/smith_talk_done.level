@@ -1,0 +1,12 @@
+[HEADER]
+id: smith_talk_done
+title: The Smith
+
+[CONTENT]
+"Good luck with that dagger," the smith grunts. "Don't dull the edge."
+
+[OPTIONS]
+Leave -> ../blacksmith.level
+
+[DIRECTIVES]
+input_mode: choice

@@ -6,9 +6,14 @@ title: Grand Hall
 The tunnel opens into a grand hall. Statues of ancient kings line the walls. To the east is a heavy iron door. To the west, a dark crypt.
 
 [OPTIONS]
-Open the Iron Door -> ../tower/entrance.level
-Explore the Crypt -> ./crypt.level
-Go back to tunnel -> ./tunnel.level
+open_door | Open the Iron Door -> ../tower/entrance.level
+check_door | Inspect the Iron Door -> ./secrets/door_locked.level
+explore_crypt | Explore the Crypt -> ./crypt.level
+go_back | Go back to tunnel -> ./tunnel.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=open_door requires_value=iron_key_found:true
+option=check_door requires_missing_value=iron_key_found

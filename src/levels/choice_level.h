@@ -2,6 +2,7 @@
 #define CLI_ADVENTURE_LEVELS_CHOICE_LEVEL_H_
 
 #include <string>
+#include <unordered_set>
 #include <unordered_map>
 #include <vector>
 
@@ -23,11 +24,22 @@ class ChoiceLevel final : public ILevel {
  private:
   static std::string build_title(
       const std::unordered_map<std::string, std::string>& header);
+  static std::string resolve_option_id(const adventure::parser::LevelOption& option,
+                                       std::size_t index);
+  bool conditions_pass_for_option(const std::string& option_id,
+                                  const adventure::context::GameContext& context) const;
+  void apply_mutations(const std::vector<adventure::parser::MemoryMutation>& mutations,
+                       adventure::context::GameContext& context) const;
+  bool validate_rule_option_ids(std::string* invalid_option_id) const;
 
   std::string title_;
   std::string ascii_art_path_;
   std::vector<std::string> content_lines_;
   std::vector<adventure::parser::LevelOption> options_;
+  std::vector<adventure::parser::MemoryMutation> on_enter_memory_;
+  std::vector<adventure::parser::OptionCondition> option_conditions_;
+  std::vector<adventure::parser::OptionEffect> option_effects_;
+  std::unordered_set<std::string> option_ids_;
   const adventure::ui::Renderer& renderer_;
 };
 

@@ -10,9 +10,9 @@ Moonlight cuts through iron bars.
 Two exits stand out: a locked gate and a cracked wall.
 
 [OPTIONS]
-Examine the gate -> ./gate.level
-Push through the cracked wall -> ../tunnels/entry.level
-Call out to the guard => ./guard_reply.level
+search_stash | Examine the hidden stash -> ./stash.level
+open_gate | Unlock the gate -> ./gate.level
+push_wall | Push through the cracked wall -> ../tunnels/entry.level
 
 [DIRECTIVES]
 input_mode: choice
@@ -20,5 +20,11 @@ ascii: ../assets/cell.txt
 on_enter: play_sfx=drip
 
 [MEMORY]
-set: event.cell_intro_seen=true
-flag: intro.started
+on_enter add_flag=intro.started
+on_enter set_value=event.cell_intro_seen:true
+
+[OPTION_CONDITIONS]
+option=open_gate requires_flag=got_iron_key
+
+[OPTION_EFFECTS]
+option=search_stash add_flag=searched_stash

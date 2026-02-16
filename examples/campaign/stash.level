@@ -1,0 +1,22 @@
+[HEADER]
+id: stash
+title: Hidden Stash
+
+[CONTENT]
+Behind loose stones you find an old iron key and a wood axe.
+You can take the key or walk away.
+
+[OPTIONS]
+take_key | Take the key and return -> ./start.level
+leave_key | Leave it and return -> ./start.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[MEMORY]
+on_enter add_flag=found_stash
+on_enter set_value=stash.status:opened
+
+[OPTION_EFFECTS]
+option=take_key add_flag=got_iron_key
+option=take_key set_value=weapon:axe

@@ -1,0 +1,18 @@
+[HEADER]
+id: treasure
+title: Treasure!
+
+[CONTENT]
+You found gold! But a guardian awakens. It is made of stone.
+
+[OPTIONS]
+fight_bare | Fight guardian -> ../endings/death_guardian.level
+fight_dagger | Fight with dagger -> ./boss_fight/guardian_dead.level
+run | Run away -> ./shore.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_CONDITIONS]
+option=fight_bare requires_missing_value=dagger_taken
+option=fight_dagger requires_value=dagger_taken:true

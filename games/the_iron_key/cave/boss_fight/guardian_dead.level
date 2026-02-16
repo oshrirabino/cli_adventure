@@ -1,0 +1,16 @@
+[HEADER]
+id: guardian_dead
+title: Guardian Defeated
+
+[CONTENT]
+The guardian falls!
+Inside the chest, you find it: THE IRON KEY.
+
+[OPTIONS]
+leave | Leave -> ../shore.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=leave set_value=iron_key_found:true

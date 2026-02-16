@@ -48,10 +48,69 @@ input_mode: choice
 
 Notes:
 - Option format: `Text -> relative/path.level`
+- Option format with explicit ID (recommended for memory rules):
+  - `option_id | Text -> relative/path.level`
 - Relative paths are resolved from the current level file location.
 - Optional ASCII art in header:
   - `ascii_art: ./art/room.txt`
   - Path is resolved relative to the current level file.
+
+### Memory and conditional options
+
+Use optional sections:
+
+- `[MEMORY]` for level-enter mutations
+- `[OPTION_CONDITIONS]` for visibility rules
+- `[OPTION_EFFECTS]` for mutations on selected option
+
+Example:
+
+```text
+[OPTIONS]
+take_axe | Pick up the axe -> ./forest.level
+cut_tree | Cut the tree down -> ./clearing.level
+
+[MEMORY]
+on_enter add_flag=visited_forest
+on_enter set_value=zone:forest
+
+[OPTION_CONDITIONS]
+option=cut_tree requires_flag=got_axe
+
+[OPTION_EFFECTS]
+option=take_axe add_flag=got_axe
+option=take_axe set_value=weapon:axe
+```
+
+Supported mutations:
+
+- `add_flag=<flag>`
+- `clear_flag=<flag>`
+- `set_value=<key>:<value>`
+- `erase_value=<key>`
+
+Supported conditions:
+
+- `requires_flag=<flag>`
+- `forbids_flag=<flag>`
+- `requires_value=<key>:<value>`
+- `requires_missing_value=<key>`
+
+### Same Text, different outcomes
+
+To make one visible choice behave differently by memory, define two options with different IDs but the same display text, then gate them with opposite conditions:
+
+```text
+[OPTIONS]
+fight_magic | Fight demon -> ./endings/win.level
+fight_plain | Fight demon -> ./endings/lose.level
+
+[OPTION_CONDITIONS]
+option=fight_magic requires_flag=got_magic_sword
+option=fight_plain forbids_flag=got_magic_sword
+```
+
+This keeps the UI text identical while routing to different targets based on memory.
 
 ### Required for endgame levels
 
@@ -150,6 +209,7 @@ You can also run with a custom theme file:
 
 - Every choice level has at least one option.
 - Every option target path is valid.
+- If using `[OPTION_CONDITIONS]` or `[OPTION_EFFECTS]`, option IDs referenced by `option=` exist.
 - Every ending uses `input_mode: endgame`.
 - Every ending has `result: victory` or `result: game_over`.
 - Optional: `ascii_art` files exist for levels that reference them.

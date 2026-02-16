@@ -6,9 +6,14 @@ title: Wolf Attack!
 You stumble upon a pack of wolves! Their leader, a massive beast with glowing eyes, snarls at you.
 
 [OPTIONS]
-Fight with bare hands -> ../endings/wolf_eaten.level
-Run for your life -> ./run_away.level
-Climb a tree -> ./tree_climb.level
+fight_bare | Fight with bare hands -> ../endings/wolf_eaten.level
+fight_dagger | Fight with dagger -> ./encounters/wolf_victory.level
+run | Run for your life -> ./run_away.level
+climb | Climb a tree -> ./tree_climb.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=fight_bare requires_missing_value=dagger_taken
+option=fight_dagger requires_value=dagger_taken:true

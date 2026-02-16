@@ -6,8 +6,13 @@ title: Musty Cellar
 The cellar is dark and filled with barrels. In the corner, you see a small, rusty lockbox.
 
 [OPTIONS]
-Open the lockbox -> ./lockbox.level
-Go back upstairs -> ./tavern.level
+open_box | Open the lockbox -> ./lockbox.level
+open_box_empty | Open the lockbox -> ./interactions/lockbox_empty.level
+go_back | Go back upstairs -> ./tavern.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=open_box requires_missing_value=gem_taken
+option=open_box_empty requires_value=gem_taken:true

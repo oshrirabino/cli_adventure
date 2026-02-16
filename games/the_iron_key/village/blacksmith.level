@@ -6,9 +6,14 @@ title: Blacksmith Shop
 The heat is intense here. The blacksmith is hammering a red-hot sword.
 
 [OPTIONS]
-Talk to blacksmith -> ./smith_talk.level
-Look at weapons -> ./weapons.level
-Leave shop -> ./town_square.level
+talk_init | Talk to blacksmith -> ./smith_talk.level
+talk_done | Talk to blacksmith -> ./interactions/smith_talk_done.level
+look_weapons | Look at weapons -> ./weapons.level
+leave | Leave shop -> ./town_square.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=talk_init requires_missing_value=dagger_taken
+option=talk_done requires_value=dagger_taken:true

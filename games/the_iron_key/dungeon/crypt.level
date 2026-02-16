@@ -6,9 +6,14 @@ title: The Forgotten Crypt
 Sarcophagi are scattered around. A cold presence fills the room. A ghostly figure materializes.
 
 [OPTIONS]
-Attack the ghost -> ../endings/ghost_death.level
-Run back to the hall -> ./hall.level
-Speak to the ghost -> ./ghost_talk.level
+attack | Attack the ghost -> ../endings/ghost_death.level
+bind | Bind the ghost -> ./secrets/ghost_bound.level
+run | Run back to the hall -> ./hall.level
+speak | Speak to the ghost -> ./ghost_talk.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=bind requires_flag=spirit_sight
+option=attack requires_missing_flag=spirit_sight

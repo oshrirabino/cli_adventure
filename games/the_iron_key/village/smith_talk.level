@@ -6,7 +6,10 @@ title: The Smith
 "I can't make you a key," the smith grunts. "But take this old dagger. It might help you in the forest."
 
 [OPTIONS]
-Take dagger -> ./blacksmith.level
+take_dagger | Take dagger -> ../village/blacksmith.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_EFFECTS]
+option=take_dagger set_value=dagger_taken:true

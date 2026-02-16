@@ -1,0 +1,12 @@
+[HEADER]
+id: lockbox_empty
+title: Empty Lockbox
+
+[CONTENT]
+The lockbox is empty. You already took the gem.
+
+[OPTIONS]
+Close box -> ../cellar.level
+
+[DIRECTIVES]
+input_mode: choice

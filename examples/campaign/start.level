@@ -5,12 +5,17 @@ ascii_art: ./art/cell.txt
 
 [CONTENT]
 You wake in a damp stone cell lit by pale moonlight.
-One route leads to the gate.
+One route leads to the gate, but it needs a key.
+A hidden stash sits behind loose stone.
 Another route squeezes into a cracked wall.
 
 [OPTIONS]
-Approach the iron gate -> ./gate.level
-Slip through the cracked wall -> ./tunnels/entry.level
+search_stash | Search the hidden stash -> ./stash.level
+open_gate | Unlock the iron gate -> ./gate.level
+slip_wall | Slip through the cracked wall -> ./tunnels/entry.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=open_gate requires_flag=got_iron_key

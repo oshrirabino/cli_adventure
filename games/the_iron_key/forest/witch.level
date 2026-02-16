@@ -1,0 +1,16 @@
+[HEADER]
+id: witch_hut
+title: Witch's Hut
+
+[CONTENT]
+The witch stirs a bubbling cauldron. "Drink," she cackles. "It will open your eyes."
+
+[OPTIONS]
+drink | Drink the potion -> ./cave_entrance.level
+refuse | Refuse -> ../endings/death_curse.level
+
+[DIRECTIVES]
+input_mode: choice
+
+[OPTION_EFFECTS]
+option=drink add_flag=spirit_sight

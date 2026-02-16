@@ -1,0 +1,13 @@
+[HEADER]
+id: wolf_victory
+title: Victorious!
+
+[CONTENT]
+You plunge the dagger into the wolf's side. It yelps and retreats into the darkness!
+The path is clear.
+
+[OPTIONS]
+Continue -> ../path.level
+
+[DIRECTIVES]
+input_mode: choice
