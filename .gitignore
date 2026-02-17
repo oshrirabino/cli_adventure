@@ -2,4 +2,5 @@ build/
 AGENT.md
 architecture.md
 CHANGES.md
-ascii/scripts/
+ascii/
+scripts/
