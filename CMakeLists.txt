@@ -51,4 +51,8 @@ if(BUILD_TESTING)
     add_executable(engine_flow_tests tests/engine_flow_tests.cpp)
     target_link_libraries(engine_flow_tests PRIVATE adventure_engine)
     add_test(NAME engine_flow_tests COMMAND engine_flow_tests)
+
+    add_executable(renderer_tests tests/renderer_tests.cpp)
+    target_link_libraries(renderer_tests PRIVATE adventure_engine)
+    add_test(NAME renderer_tests COMMAND renderer_tests)
 endif()

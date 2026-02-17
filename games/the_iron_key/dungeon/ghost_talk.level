@@ -3,7 +3,11 @@ id: ghost_talk
 title: Ghostly Advice
 
 [CONTENT]
-"The Wizard fears the light," the ghost whispers before fading away. You feel a strange warmth.
+The spirit's face flickers, grief and fury in equal measure.
+"The Wizard chained us to this place. He bound iron with names."
+"At the lake, words can wound deeper than steel."
+"Remember this: title before blade."
+The ghost fades, leaving a warmth in your palms.
 
 [OPTIONS]
 Return to hall -> ./hall.level

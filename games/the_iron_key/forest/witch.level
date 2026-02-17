@@ -3,7 +3,10 @@ id: witch_hut
 title: Witch's Hut
 
 [CONTENT]
-The witch stirs a bubbling cauldron. "Drink," she cackles. "It will open your eyes."
+The hut smells of ash, herbs, and river mud.
+An old witch stirs a copper cauldron without looking up.
+"Traveler," she rasps, "the dead speak loudly in these woods. Drink, and you may hear them."
+"Refuse, and I will not be insulted twice."
 
 [OPTIONS]
 drink | Drink the potion -> ./cave_entrance.level

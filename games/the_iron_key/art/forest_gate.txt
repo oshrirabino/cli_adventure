@@ -1,0 +1,8 @@
+[default_color=bright_black]
+            /\
+           /  \         o
+      /\  / /\ \  /\
+     /  \/ /  \ \/  \
+    /                \
+[color=bright_green]   /    EBONWOOD GATE   \
+[color=bright_black]  /____________________\

@@ -3,7 +3,10 @@ id: smith_talk
 title: The Smith
 
 [CONTENT]
-"I can't make you a key," the smith grunts. "But take this old dagger. It might help you in the forest."
+"I can't forge that Iron Key, and I wouldn't if I could," the smith says.
+He opens a drawer and sets an old dagger on the bench.
+"Lake-steel edge. Bit chipped, still honest."
+"Take it. If beasts corner you, don't swing wide. Keep your wrist firm and your feet moving."
 
 [OPTIONS]
 take_dagger | Take dagger -> ../village/blacksmith.level

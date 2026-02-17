@@ -1,6 +1,7 @@
+[default_color=bright_green]
        .---.
       /     \
-      | () () |
+ [color=bright_red]     | () () |
        \  ^  /
         |||||
        /| | |\

@@ -1,9 +1,14 @@
 [HEADER]
 id: hall
 title: Grand Hall
+ascii_art: ../art/iron_door.txt
 
 [CONTENT]
-The tunnel opens into a grand hall. Statues of ancient kings line the walls. To the east is a heavy iron door. To the west, a dark crypt.
+The tunnel opens into a vaulted chamber.
+Stone kings stand guard along the walls, each missing both eyes.
+To the east rises a heavy iron door worked in the shape of a skull keyhole.
+To the west lies a crypt mouth draped in pale mist.
+Dust here is thin, as if something still walks these stones.
 
 [OPTIONS]
 open_door | Open the Iron Door -> ../tower/entrance.level

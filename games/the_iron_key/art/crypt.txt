@@ -1,0 +1,8 @@
+[default_color=bright_black]
+      .----.   .----.
+     / RIP \   / RIP \
+    |      | |      |
+    |______| |______|
+[color=bright_cyan]       .-.
+[color=bright_cyan]      (o o)
+[color=bright_cyan]      | O |

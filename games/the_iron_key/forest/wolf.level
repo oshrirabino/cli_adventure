@@ -1,9 +1,12 @@
 [HEADER]
 id: wolf
 title: Wolf Attack!
+ascii_art: ../art/wolf_moon.txt
 
 [CONTENT]
-You stumble upon a pack of wolves! Their leader, a massive beast with glowing eyes, snarls at you.
+A pack slides out of the dark like smoke.
+Their leader is bigger than a horse, fur scarred with pale lines that catch moonlight.
+It lowers its head and growls, testing your fear.
 
 [OPTIONS]
 fight_bare | Fight with bare hands -> ../endings/wolf_eaten.level

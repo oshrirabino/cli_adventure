@@ -1,0 +1,8 @@
+[default_color=bright_black]
+       .--------------.
+[color=bright_red]      / ============== \
+[color=bright_white]     |       ___      |
+[color=bright_white]     |      /   \     |
+[color=bright_white]     |      \_O_/     |
+[color=bright_red]      \ ============== /
+[color=bright_black]       '--------------'

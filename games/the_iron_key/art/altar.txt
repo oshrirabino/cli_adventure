@@ -1,0 +1,7 @@
+[default_color=bright_white]
+         _________
+        /  _____  \
+       /__/____\__\
+[color=bright_magenta]       |  o  o  o  |
+[color=bright_magenta]       |  o  o  o  |
+[color=bright_white]       ------------

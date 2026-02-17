@@ -1,9 +1,13 @@
 [HEADER]
 id: dungeon_entry
 title: Damp Dungeon
+ascii_art: ../art/dungeon_gate.txt
 
 [CONTENT]
-The air in the dungeon is thick and smells of mold. Water drips from the ceiling. A long tunnel stretches ahead.
+The cave throat narrows into old stonework.
+Someone built these passages centuries ago, then abandoned them to rot.
+Water falls in slow, patient drops from the ceiling.
+A tunnel slopes down into darkness, while broken mortar along the wall hints at hidden seams.
 
 [OPTIONS]
 Walk down the tunnel -> ./tunnel.level

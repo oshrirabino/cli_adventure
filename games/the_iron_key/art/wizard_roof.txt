@@ -1,0 +1,9 @@
+[default_color=bright_black]
+[color=bright_yellow]             .-.
+[color=bright_yellow]          .-(   )-.
+[color=bright_yellow]          (___ ___)
+[color=bright_magenta]               /\
+[color=bright_magenta]              /  \
+[color=bright_magenta]             /_/\_\
+[color=bright_white]               /||
+[color=bright_white]               /||

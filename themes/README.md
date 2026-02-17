@@ -53,3 +53,10 @@ error_color = bright_red
 - `bright_blue`, `bright_magenta`, `bright_cyan`, `bright_white`
 
 Unknown color names fall back to plain text output for that field.
+
+These same color names are also valid in ASCII art line tags:
+
+- `[color=<name>]...`
+- `[color:<name>]...`
+- `[default_color=<name>]` (whole-file default color directive)
+- `[art_color=<name>]` (alias for whole-file default)

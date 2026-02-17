@@ -141,6 +141,29 @@ option=open_gate requires_flag=got_key
 option=take_key add_flag=got_key
 ```
 
+## ASCII Art Color Tags
+
+In ASCII art files referenced by `ascii_art`, each line can optionally start with a color tag:
+
+```text
+[color=bright_cyan]  /\\
+[color=bright_white] /  \\
+[color=bright_red] /____\\
+```
+
+- Supported tag forms:
+  - `[color=<name>]`
+  - `[color:<name>]`
+  - Leading spaces before line tags are allowed.
+- Whole-file default color (directive line, no trailing text):
+  - `[default_color=<name>]`
+  - `[default_color:<name>]`
+  - `[art_color=<name>]` (alias)
+- If no tag is present, the line uses the theme `body_color`.
+- If a whole-file default is set, untagged lines use that color.
+- Per-line `[color=...]` tags override the whole-file default for that line.
+- Color names match the theme color names in `themes/README.md`.
+
 ## Validate A Game
 
 From launcher:

@@ -1,0 +1,7 @@
+[default_color=green]
+   ^^^      ||      ^^^
+  ^^^^^     ||     ^^^^^
+ ^^^^^^^    ||    ^^^^^^^
+[color=yellow]     \\     ||     //
+[color=yellow]      \\    ||    //
+[color=yellow]       \\   ||   //

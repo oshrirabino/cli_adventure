@@ -3,10 +3,18 @@ id: barkeep
 title: The Barkeep
 
 [CONTENT]
-"We don't get many adventurers here," the barkeep says. "If you're looking for trouble, try the forest. But if you're looking for the Iron Key, old legends say it was lost in the caves beneath the woods."
+"You have that road-dust look," the barkeep says.
+"Listen close. People chase the Iron Key for gold. They come back with curses, if they come back at all."
+He leans in, voice low.
+"The key was not hidden. It was guarded. The guardian at the underground lake answers to an old title: Ferrum-Warden."
+"Say that only when you must."
 
 [OPTIONS]
-Go back -> ./tavern.level
+go_back | Go back -> ./tavern.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_EFFECTS]
+option=go_back add_flag=knows_guardian_name
+option=go_back set_value=guardian_name:ferrum-warden

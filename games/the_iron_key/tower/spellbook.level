@@ -3,10 +3,18 @@ id: spellbook
 title: The Grimoire
 
 [CONTENT]
-You read a spell of binding. You feel power surging through you. This might help against the Wizard.
+The script rearranges itself as you read.
+One sigil repeats beside a margin note:
+"Bind the named. Name the bound."
+You practice the cadence until the page cools beneath your hands.
+You can now cast a binding spell with intent.
 
 [OPTIONS]
-Close the book -> ./library.level
+close_book | Close the book -> ./library.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_EFFECTS]
+option=close_book add_flag=learned_binding
+option=close_book set_value=spell:binding

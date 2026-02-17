@@ -1,0 +1,6 @@
+[default_color=bright_black]
+[color=bright_yellow]     .~~~~.
+[color=bright_yellow]    |    |)
+[color=yellow]    | ALE|
+[color=yellow]    |____|)
+[color=bright_black]    `----'

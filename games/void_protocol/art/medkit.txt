@@ -1,6 +1,7 @@
+[default_color=bright_white]
        _______
       /      /
-     /  +   /
+ [color=bright_red]    /  +   /
     /______/
    |      |
    |      |

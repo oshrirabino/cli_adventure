@@ -1,0 +1,6 @@
+[default_color=bright_black]
+[color=bright_white]      /\
+[color=bright_white] /\  ||  /\
+[color=bright_white] ||  ||  ||
+[color=bright_white] ||  ||  ||
+[color=yellow]===================

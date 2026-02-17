@@ -1,9 +1,13 @@
 [HEADER]
 id: tavern
 title: The Rusty Mug Tavern
+ascii_art: ../art/tavern_mug.txt
 
 [CONTENT]
-The tavern is warm and smells of ale and stew. The barkeep is wiping a glass. There is a door leading down to the cellar, slightly ajar.
+The tavern glows amber in the stormlight.
+Merchants whisper over cards. A minstrel tunes a lute but never starts the song.
+Behind the bar, the barkeep polishes a glass that already shines.
+A narrow cellar door stands ajar, its iron latch recently scratched.
 
 [OPTIONS]
 Talk to the barkeep -> ./barkeep.level

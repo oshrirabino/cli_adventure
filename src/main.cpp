@@ -110,9 +110,6 @@ void run_session(const std::filesystem::path& game_root, const adventure::ui::Th
 
   adventure::engine::Engine engine{adventure::ui::Renderer(theme)};
   engine.run(std::cin, std::cout, context);
-
-  adventure::ui::wait_for_continue(std::cin, std::cout,
-                                   "Press Enter to return to Main Menu...");
 }
 
 void run_validation(const std::filesystem::path& game_root, const adventure::ui::Theme& theme) {

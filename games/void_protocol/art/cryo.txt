@@ -1,7 +1,8 @@
+[default_color=bright_cyan]
    ___________________
   /                   \
  |    CRYO POD 042     |
- |    [ ACTIVE ]       |
+ [color=bright_green] |    [ ACTIVE ]       |
  |                     |
  |     (  O_O  )       |
  |      \__-__/        |

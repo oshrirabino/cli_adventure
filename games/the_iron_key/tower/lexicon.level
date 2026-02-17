@@ -1,0 +1,21 @@
+[HEADER]
+id: lexicon
+title: Lexicon Tablet
+ascii_art: ../art/library_books.txt
+
+[CONTENT]
+Dust shifts as letters burn onto the tablet:
+"I speak without a mouth and answer every call."
+"I come alive in halls, caves, and towers."
+"Name me."
+
+[DIRECTIVES]
+input_mode: input
+input_match: exact
+input_case_sensitive: false
+input_prompt: Speak the word:
+input_invalid_message: The letters fade, then return. That is not the word.
+
+[INPUT_RULES]
+echo | echo -> ./spellbook.level
+leave | leave -> ./library.level

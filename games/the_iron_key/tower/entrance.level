@@ -1,9 +1,13 @@
 [HEADER]
 id: tower_entrance
 title: Tower Base
+ascii_art: ../art/tower_gate.txt
 
 [CONTENT]
-The air hums with magical energy. Spiral stairs wind upwards. A door leads to a library.
+The Iron Key turns with a scream of rusted wards.
+Inside, the tower breathes with old magic.
+A spiral stair coils upward into shadow.
+A side door stands open to a library where pages turn though no wind blows.
 
 [OPTIONS]
 Climb the stairs -> ./stairs.level

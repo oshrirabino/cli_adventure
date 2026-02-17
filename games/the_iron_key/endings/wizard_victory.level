@@ -3,7 +3,9 @@ id: wizard_victory
 title: Dark Magic
 
 [CONTENT]
-The Wizard laughs and blasts you with a bolt of lightning. Your journey ends here.
+The Wizard smiles, almost kindly.
+Then lightning tears through you before you can raise your weapon.
+Your last sight is the Iron Key tumbling from numb fingers as thunder swallows your name.
 
 [DIRECTIVES]
 input_mode: endgame

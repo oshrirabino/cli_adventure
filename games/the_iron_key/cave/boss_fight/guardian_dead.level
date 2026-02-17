@@ -3,8 +3,9 @@ id: guardian_dead
 title: Guardian Defeated
 
 [CONTENT]
-The guardian falls!
-Inside the chest, you find it: THE IRON KEY.
+The guardian cracks, then collapses into still stone.
+Inside the chest, beneath the coins, lies a heavy iron key carved with the same skull mark as the dungeon door.
+When you touch it, distant locks seem to click in the dark.
 
 [OPTIONS]
 leave | Leave -> ../shore.level

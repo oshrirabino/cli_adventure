@@ -1,9 +1,13 @@
 [HEADER]
 id: clearing
 title: Moonlit Clearing
+ascii_art: ../art/altar.txt
 
 [CONTENT]
-A break in the trees reveals a clearing lit by the moon. In the center is a strange stone altar. To the north, you see a dark opening in the rock face.
+The trees part without wind.
+Moonlight spills over a circular clearing where an altar of black stone waits in the center.
+Runes pulse across it in slow intervals, like breathing.
+To the north, a jagged opening in the cliff exhales cold air from deep underground.
 
 [OPTIONS]
 Examine the altar -> ./altar.level

@@ -2,6 +2,8 @@
 
 #include <utility>
 
+#include "ui/terminal_menu.h"
+
 namespace adventure::levels {
 EndGameLevel::EndGameLevel(adventure::parser::ParsedLevelData data,
                            const adventure::ui::Renderer& renderer)
@@ -18,7 +20,8 @@ void EndGameLevel::render(std::ostream& out,
 
 void EndGameLevel::execute(std::istream& in, std::ostream& out,
                            adventure::context::GameContext& context) {
-  (void)in;
+  const bool is_interactive = adventure::ui::supports_interactive_menu(in, out);
+  const std::string continue_prompt = "Press Enter to return to Main Menu...";
   const auto result_it = directives_.find("result");
   if (result_it == directives_.end()) {
     renderer_.render_structure_error(out,
@@ -30,12 +33,22 @@ void EndGameLevel::execute(std::istream& in, std::ostream& out,
   if (result_it->second == "victory") {
     renderer_.render_victory(out);
     context.set_victory(true);
+    adventure::ui::wait_for_continue(in, out, continue_prompt);
+    if (is_interactive) {
+      // Clear scene + victory banner + continue prompt lines.
+      renderer_.clear_last_scene(out, 4);
+    }
     return;
   }
 
   if (result_it->second == "game_over") {
     renderer_.render_game_over(out);
     context.set_game_over(true);
+    adventure::ui::wait_for_continue(in, out, continue_prompt);
+    if (is_interactive) {
+      // Clear scene + game-over banner + continue prompt lines.
+      renderer_.clear_last_scene(out, 4);
+    }
     return;
   }
 

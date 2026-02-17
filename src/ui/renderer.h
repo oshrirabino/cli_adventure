@@ -27,9 +27,17 @@ class Renderer {
   void render_structure_error(std::ostream& out, const std::string& message) const;
 
  private:
+  struct AsciiArtLine {
+    std::string text;
+    std::string color_name;
+  };
+
+  static bool parse_ascii_art_default_color_directive(const std::string& raw_line,
+                                                      std::string* color_name);
+  static AsciiArtLine parse_ascii_art_line(const std::string& raw_line);
   std::string colorize(const std::string& text, const std::string& color_name) const;
-  std::vector<std::string> load_ascii_art(const std::string& current_directory,
-                                          const std::string& ascii_art_relative_path) const;
+  std::vector<AsciiArtLine> load_ascii_art(const std::string& current_directory,
+                                           const std::string& ascii_art_relative_path) const;
 
   mutable std::size_t last_scene_lines_ = 0;
   Theme theme_;

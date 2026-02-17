@@ -1,9 +1,13 @@
 [HEADER]
 id: crypt
 title: The Forgotten Crypt
+ascii_art: ../art/crypt.txt
 
 [CONTENT]
-Sarcophagi are scattered around. A cold presence fills the room. A ghostly figure materializes.
+Rows of cracked sarcophagi lean at uneasy angles.
+Cold rolls across the floor in white sheets.
+A translucent figure forms beside a broken tomb, wearing the armor of an old warden.
+"Living one," it says, voice like distant bells, "state your intent."
 
 [OPTIONS]
 attack | Attack the ghost -> ../endings/ghost_death.level
@@ -16,4 +20,4 @@ input_mode: choice
 
 [OPTION_CONDITIONS]
 option=bind requires_flag=spirit_sight
-option=attack requires_missing_flag=spirit_sight
+option=attack forbids_flag=spirit_sight

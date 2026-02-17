@@ -1,6 +1,7 @@
+[default_color=bright_yellow]
       ( ( ( ) ) )
     ( ( ( ( ) ) ) )
-  ( ( ( WARNING ) ) )
- ( ( CORE UNSTABLE ) )
+ [color=bright_red] ( ( ( WARNING ) ) )
+ [color=bright_red]( ( CORE UNSTABLE ) )
   ( ( ( ( ) ) ) )
       ( ( ( ) ) )

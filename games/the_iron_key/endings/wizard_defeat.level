@@ -3,7 +3,11 @@ id: wizard_defeat
 title: Bound by Magic
 
 [CONTENT]
-You recite the binding spell. Chains of light wrap around the Wizard. He screams as he is sealed away. You have saved the realm!
+You speak the binding words with clear intent.
+Chains of pale fire coil from the storm and lock around the Wizard's arms and throat.
+He screams as the spell folds him into a shard of black glass.
+The winds settle. Far below, watchfires relight across the valley.
+You have broken his rule and saved the realm.
 
 [DIRECTIVES]
 input_mode: endgame

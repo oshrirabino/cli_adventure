@@ -1,0 +1,7 @@
+[default_color=bright_blue]
+          ~ ~ ~ ~ ~ ~ ~
+[color=bright_white]           |\
+[color=bright_white]           | \__
+[color=bright_white]        __|____\___
+[color=bright_white]        \__  _   __/
+[color=bright_blue]          ~ ~ ~ ~ ~ ~ ~

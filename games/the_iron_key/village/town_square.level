@@ -1,9 +1,14 @@
 [HEADER]
 id: town_square
 title: Oakhaven Town Square
+ascii_art: ../art/town_square.txt
 
 [CONTENT]
-The village is quiet. A few villagers go about their business. You see a cozy tavern with smoke rising from its chimney and a blacksmith shop clanging with the sound of metal on metal.
+Oakhaven is not lively, but it is watchful.
+Doors close softly when strangers pass.
+At the square's center, a dry fountain bears the crest of a broken key.
+To your left: the Rusty Mug tavern, warm and loud.
+To your right: the blacksmith's shed, all sparks and steel.
 
 [OPTIONS]
 Enter the Tavern -> ./tavern.level

@@ -1,0 +1,8 @@
+[default_color=yellow]
+       _______   _______
+      |_____  | |  _____|
+      |____| | | |____
+      |  ___| |___   _|
+      |_|         |_|
+[color=bright_white]         /\
+[color=bright_white]        /__\

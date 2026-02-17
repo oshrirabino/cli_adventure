@@ -54,6 +54,16 @@ Notes:
 - Optional ASCII art in header:
   - `ascii_art: ./art/room.txt`
   - Path is resolved relative to the current level file.
+  - ASCII art files can color specific lines with tags:
+    - `[color=bright_cyan]line text`
+    - `[color:bright_red]line text`
+    - Leading spaces before the tag are allowed:
+      - `   [color=bright_red]line text`
+  - You can set one default color for the whole art file:
+    - `[default_color=bright_cyan]`
+    - `[art_color=bright_cyan]` (alias)
+  - Lines without a color tag use theme `body_color`.
+  - If default color is set, untagged lines use that default.
 
 ### Memory and conditional options
 

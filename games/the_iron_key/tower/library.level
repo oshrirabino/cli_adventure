@@ -1,12 +1,16 @@
 [HEADER]
 id: library
 title: Ancient Library
+ascii_art: ../art/library_books.txt
 
 [CONTENT]
-Shelves upon shelves of dusty tomes. One book lies open on a lectern.
+Shelves climb to the ceiling, crammed with cracked spines and chained grimoires.
+A brass lectern holds an open volume of sigils.
+On a side desk sits an index tablet etched with a puzzle in old script.
 
 [OPTIONS]
 Read the open book -> ./spellbook.level
+Solve the index riddle -> ./lexicon.level
 Go back to entrance -> ./entrance.level
 
 [DIRECTIVES]

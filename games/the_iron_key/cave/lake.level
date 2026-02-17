@@ -1,10 +1,13 @@
 [HEADER]
 id: cave_lake
 title: Underground Lake
+ascii_art: ../art/lake_boat.txt
 
 [CONTENT]
-A vast black lake stretches before you. In the center, a small island glows with a faint light.
-There is a small, rickety boat here.
+A black lake fills a chamber wider than any cathedral.
+In the center, a low island glows with faint blue fire.
+Near your feet, a small rickety boat rocks against stone.
+You hear, beneath the water, something heavy moving.
 
 [OPTIONS]
 row_island | Row to the island -> ./island.level

@@ -1,0 +1,8 @@
+[default_color=bright_black]
+[color=bright_white]            ^
+[color=bright_white]           /|\
+[color=bright_white]          /_|_\
+[color=bright_black]         |  _  |
+[color=bright_black]         | |_| |
+[color=bright_black]         |  _  |
+[color=bright_black]         |_|_|_|

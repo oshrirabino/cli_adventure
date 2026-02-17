@@ -3,7 +3,9 @@ id: wizard_fall
 title: Gravity Wins
 
 [CONTENT]
-You charge and shove the Wizard. He teeters and falls, screaming all the way down. Not elegant, but effective.
+You charge through the hail and slam into him with everything you have left.
+He staggers, claws at empty air, and disappears over the edge.
+It is not a noble ending, but it is an ending.
 
 [DIRECTIVES]
 input_mode: endgame

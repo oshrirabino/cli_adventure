@@ -39,6 +39,15 @@ Supported sections:
     - `option_id | Text -> ./next.level`
   - Optional header field:
     - `ascii_art: ./art/name.txt` (relative to current level file)
+  - Optional ASCII art line color tag in art files:
+    - `[color=<name>]Your art line here`
+    - `[color:<name>]Your art line here`
+    - If omitted, line uses theme `body_color`.
+  - Optional ASCII art file default color directive:
+    - `[default_color=<name>]`
+    - `[default_color:<name>]`
+    - `[art_color=<name>]` (alias)
+    - Applies to all following untagged lines in that art file.
 - Endgame level:
   - `[DIRECTIVES]` must include:
     - `input_mode: endgame`

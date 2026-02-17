@@ -1,14 +1,26 @@
 [HEADER]
 id: roof
 title: Tower Roof
+ascii_art: ../art/wizard_roof.txt
 
 [CONTENT]
-The Dark Wizard stands at the edge, chanting a spell. He turns to face you, eyes glowing with malice.
+Stormlight cuts across the rooftop.
+The Dark Wizard stands at the edge of a broken parapet, chanting over the valley below.
+When he turns, his eyes burn like coals.
+"Another key-thief," he says. "Kneel, and I may make your death useful."
 
 [OPTIONS]
-Attack him directly -> ../endings/wizard_victory.level
-Use the spell you learned -> ../endings/wizard_defeat.level
-Push him off the edge -> ../endings/wizard_fall.level
+attack_direct | Attack him directly -> ../endings/wizard_victory.level
+cast_known | Use the binding spell -> ../endings/wizard_defeat.level
+cast_unknown | Use the binding spell -> ../endings/wizard_victory.level
+name_and_cast | Speak his true name and cast -> ../endings/wizard_defeat.level
+push_him | Push him off the edge -> ../endings/wizard_fall.level
 
 [DIRECTIVES]
 input_mode: choice
+
+[OPTION_CONDITIONS]
+option=cast_known requires_flag=learned_binding
+option=cast_unknown forbids_flag=learned_binding
+option=name_and_cast requires_flag=learned_binding
+option=name_and_cast requires_flag=knows_wizard_name

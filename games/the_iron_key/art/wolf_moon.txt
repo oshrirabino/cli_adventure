@@ -1,0 +1,7 @@
+[default_color=bright_black]
+[color=bright_yellow]             .-.
+[color=bright_yellow]          .-(   )-.
+[color=bright_yellow]         (___ ___)
+[color=white]            /\_/\
+[color=white]           ( o.o )
+[color=white]            > ^ <

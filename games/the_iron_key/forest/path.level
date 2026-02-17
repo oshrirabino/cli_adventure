@@ -1,9 +1,13 @@
 [HEADER]
 id: forest_path
 title: Ebonwood Path
+ascii_art: ../art/forest_path.txt
 
 [CONTENT]
-The forest is dark and the trees are twisted. Strange noises come from all directions. The path splits ahead.
+Ebonwood swallows sound.
+Branches knit overhead, turning day to twilight.
+Now and then you see old iron nails hammered into trunks, each bent as if twisted by hand.
+Ahead, the path forks around a moss-covered standing stone.
 
 [OPTIONS]
 Go towards the clearing -> ./clearing.level

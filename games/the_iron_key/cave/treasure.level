@@ -1,13 +1,18 @@
 [HEADER]
 id: treasure
 title: Treasure!
+ascii_art: ../art/chest_key.txt
 
 [CONTENT]
-You found gold! But a guardian awakens. It is made of stone.
+You lift the chest lid.
+Gold and old silver flash in the dark, then the island trembles.
+A stone guardian rises from the lakebed, water streaming from carved armor.
+Its voice grinds like millstones: "Name the Warden, or be broken."
 
 [OPTIONS]
 fight_bare | Fight guardian -> ../endings/death_guardian.level
 fight_dagger | Fight with dagger -> ./boss_fight/guardian_dead.level
+speak_name | Speak the guardian's title -> ./boss_fight/guardian_dead.level
 run | Run away -> ./shore.level
 
 [DIRECTIVES]
@@ -16,3 +21,4 @@ input_mode: choice
 [OPTION_CONDITIONS]
 option=fight_bare requires_missing_value=dagger_taken
 option=fight_dagger requires_value=dagger_taken:true
+option=speak_name requires_flag=knows_guardian_name
