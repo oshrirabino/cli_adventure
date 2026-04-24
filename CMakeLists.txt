@@ -9,6 +9,7 @@ add_library(adventure_engine
     src/context/game_context.cpp
     src/engine/engine.cpp
     src/levels/choice_level.cpp
+    src/levels/animated_level_decorator.cpp
     src/levels/end_game_level.cpp
     src/levels/input_level.cpp
     src/levels/terminal_level_factory.cpp
@@ -55,4 +56,8 @@ if(BUILD_TESTING)
     add_executable(renderer_tests tests/renderer_tests.cpp)
     target_link_libraries(renderer_tests PRIVATE adventure_engine)
     add_test(NAME renderer_tests COMMAND renderer_tests)
+
+    add_executable(animated_level_tests tests/animated_level_tests.cpp)
+    target_link_libraries(animated_level_tests PRIVATE adventure_engine)
+    add_test(NAME animated_level_tests COMMAND animated_level_tests)
 endif()

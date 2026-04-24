@@ -1,0 +1,23 @@
+[HEADER]
+id: reef_gate
+title: Mouth Of The Reef
+ascii_art: ../art/reef_gate_anim.txt
+
+[CONTENT]
+At the reef arch, a pale octopus watches with lamp-bright eyes.
+Its tentacles sketch symbols in the current.
+
+[DIRECTIVES]
+input_mode: input
+ascii_art_mode: animated
+input_prompt: Speak a pass-phrase:
+input_invalid_message: The reef hums and rejects you.
+input_match: exact
+input_case_sensitive: false
+
+[INPUT_RULES]
+name_tide | tidebound -> ../depths/shrine.level
+retreat | retreat -> ../endings/drowned.level
+
+[OPTION_EFFECTS]
+option=name_tide add_flag=octopus_favor

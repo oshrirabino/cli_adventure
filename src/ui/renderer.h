@@ -10,6 +10,8 @@
 
 namespace adventure::ui {
 
+struct MenuRenderHooks;
+
 class Renderer {
  public:
   explicit Renderer(Theme theme);
@@ -21,6 +23,9 @@ class Renderer {
                     const std::string& current_directory,
                     const std::string& ascii_art_relative_path) const;
   void clear_last_scene(std::ostream& out, std::size_t extra_lines_after_scene = 0) const;
+  void record_last_scene_lines(std::size_t rendered_lines) const;
+  void set_menu_render_hooks(const MenuRenderHooks* hooks) const;
+  const MenuRenderHooks* menu_render_hooks() const;
 
   void render_victory(std::ostream& out) const;
   void render_game_over(std::ostream& out) const;
@@ -40,6 +45,7 @@ class Renderer {
                                            const std::string& ascii_art_relative_path) const;
 
   mutable std::size_t last_scene_lines_ = 0;
+  mutable const MenuRenderHooks* menu_render_hooks_ = nullptr;
   Theme theme_;
 };
 

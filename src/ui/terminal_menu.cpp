@@ -3,10 +3,12 @@
 #include <algorithm>
 #include <cctype>
 #include <csignal>
+#include <cerrno>
 #include <iostream>
 #include <stdexcept>
 #include <string>
 
+#include <sys/select.h>
 #include <termios.h>
 #include <unistd.h>
 
@@ -118,21 +120,51 @@ Key read_key() {
   return Key::kUnknown;
 }
 
-void render_menu(std::ostream& out, const std::vector<std::string>& options,
-                 const std::string& prompt, std::size_t selected, bool redraw,
-                 const Theme& theme) {
-  const std::size_t lines = options.size() + 1;
-  if (redraw) {
-    out << "\033[" << lines << "A";
-    for (std::size_t i = 0; i < lines; ++i) {
-      out << "\033[2K\r";
-      if (i + 1 < lines) {
-        out << "\033[1B";
-      }
-    }
-    out << "\033[" << (lines - 1) << "A";
-  }
+Key read_key_with_timeout(std::size_t timeout_ms, bool* timed_out) {
+  *timed_out = false;
+  fd_set read_set;
+  FD_ZERO(&read_set);
+  FD_SET(STDIN_FILENO, &read_set);
 
+  timeval timeout{};
+  timeout.tv_sec = static_cast<time_t>(timeout_ms / 1000);
+  timeout.tv_usec = static_cast<suseconds_t>((timeout_ms % 1000) * 1000);
+
+  while (true) {
+    const int ready = select(STDIN_FILENO + 1, &read_set, nullptr, nullptr, &timeout);
+    if (ready > 0) {
+      return read_key();
+    }
+    if (ready == 0) {
+      *timed_out = true;
+      return Key::kUnknown;
+    }
+    if (errno == EINTR) {
+      FD_ZERO(&read_set);
+      FD_SET(STDIN_FILENO, &read_set);
+      continue;
+    }
+    return Key::kUnknown;
+  }
+}
+
+void clear_rendered_block(std::ostream& out, std::size_t lines) {
+  if (lines == 0) {
+    return;
+  }
+  out << "\033[" << lines << "A";
+  for (std::size_t i = 0; i < lines; ++i) {
+    out << "\033[2K\r";
+    if (i + 1 < lines) {
+      out << "\033[1B";
+    }
+  }
+  out << "\033[" << (lines - 1) << "A";
+}
+
+void render_menu(std::ostream& out, const std::vector<std::string>& options,
+                 const std::string& prompt, std::size_t selected,
+                 const Theme& theme) {
   const auto colorize = [&theme](const std::string& text, const std::string& color) {
     if (!theme.use_color) {
       return text;
@@ -153,6 +185,22 @@ void render_menu(std::ostream& out, const std::vector<std::string>& options,
     out << "\n";
   }
   out.flush();
+}
+
+void render_interactive_block(std::ostream& out, const std::vector<std::string>& options,
+                              const std::string& prompt, std::size_t selected,
+                              const Theme& theme, const MenuRenderHooks* hooks, bool redraw) {
+  const std::size_t menu_lines = options.size() + 1;
+  const std::size_t extra_lines = (hooks != nullptr) ? hooks->extra_lines : 0;
+  const std::size_t total_lines = menu_lines + extra_lines;
+  if (redraw) {
+    clear_rendered_block(out, total_lines);
+  }
+
+  if (hooks != nullptr && hooks->render_extra_block) {
+    hooks->render_extra_block(out);
+  }
+  render_menu(out, options, prompt, selected, theme);
 }
 
 bool try_parse_index(const std::string& input, std::size_t option_count, std::size_t* index) {
@@ -205,13 +253,30 @@ MenuSelection pick_option_fallback(std::istream& in, std::ostream& out,
 }
 
 MenuSelection pick_option_interactive(std::ostream& out, const std::vector<std::string>& options,
-                                      const std::string& prompt, const Theme& theme) {
+                                      const std::string& prompt, const Theme& theme,
+                                      const MenuRenderHooks* hooks) {
   ScopedRawMode raw_mode;
   std::size_t selected = 0;
-  render_menu(out, options, prompt, selected, false, theme);
+  const std::size_t menu_lines = options.size() + 1;
+  render_interactive_block(out, options, prompt, selected, theme, hooks, false);
 
   while (true) {
-    const Key key = read_key();
+    bool timed_out = false;
+    const bool use_timeout =
+        hooks != nullptr && hooks->on_idle_tick && hooks->tick_interval_ms > 0;
+    const Key key = use_timeout ? read_key_with_timeout(hooks->tick_interval_ms, &timed_out)
+                                : read_key();
+    if (timed_out) {
+      hooks->on_idle_tick();
+      if (hooks->render_extra_in_place) {
+        hooks->render_extra_in_place(out, menu_lines);
+        out.flush();
+      } else {
+        render_interactive_block(out, options, prompt, selected, theme, hooks, true);
+      }
+      continue;
+    }
+
     if (key == Key::kEof) {
       throw std::runtime_error("Input stream closed before a selection was made.");
     }
@@ -221,12 +286,14 @@ MenuSelection pick_option_interactive(std::ostream& out, const std::vector<std::
     }
     if (key == Key::kUp) {
       selected = (selected == 0) ? (options.size() - 1) : (selected - 1);
-      render_menu(out, options, prompt, selected, true, theme);
+      clear_rendered_block(out, menu_lines);
+      render_menu(out, options, prompt, selected, theme);
       continue;
     }
     if (key == Key::kDown) {
       selected = (selected + 1) % options.size();
-      render_menu(out, options, prompt, selected, true, theme);
+      clear_rendered_block(out, menu_lines);
+      render_menu(out, options, prompt, selected, theme);
       continue;
     }
   }
@@ -241,13 +308,13 @@ bool supports_interactive_menu(const std::istream& in, const std::ostream& out) 
 
 MenuSelection pick_option(std::istream& in, std::ostream& out,
                           const std::vector<std::string>& options, const std::string& prompt,
-                          const Theme& theme) {
+                          const Theme& theme, const MenuRenderHooks* hooks) {
   if (options.empty()) {
     throw std::invalid_argument("pick_option requires at least one option.");
   }
 
   if (supports_interactive_menu(in, out)) {
-    return pick_option_interactive(out, options, prompt, theme);
+    return pick_option_interactive(out, options, prompt, theme, hooks);
   }
 
   return pick_option_fallback(in, out, options, prompt);
@@ -258,14 +325,7 @@ void clear_menu_block(std::istream& in, std::ostream& out, std::size_t rendered_
     return;
   }
 
-  out << "\033[" << rendered_lines << "A";
-  for (std::size_t i = 0; i < rendered_lines; ++i) {
-    out << "\033[2K\r";
-    if (i + 1 < rendered_lines) {
-      out << "\033[1B";
-    }
-  }
-  out << "\033[" << (rendered_lines - 1) << "A";
+  clear_rendered_block(out, rendered_lines);
   out.flush();
 }
 

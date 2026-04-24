@@ -1,0 +1,11 @@
+[HEADER]
+id: reef_alliance
+title: Oath Beneath The Tides
+
+[CONTENT]
+The ancient octopus knots your wrist with a living rope of coral light.
+Pirates and reef-keepers share the sea lanes under your banner.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

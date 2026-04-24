@@ -1,0 +1,11 @@
+[HEADER]
+id: crown_victory
+title: Crown Of The Leviathan
+
+[CONTENT]
+You rise through storm foam with the Leviathan Crown in hand.
+The Blackwake answers only to you now.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

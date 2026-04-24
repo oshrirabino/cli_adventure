@@ -1,0 +1,11 @@
+[HEADER]
+id: dragged
+title: Dragged Below
+
+[CONTENT]
+Your shot misses. A tentacle coils your waist and vanishes into black water.
+The sea closes overhead.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

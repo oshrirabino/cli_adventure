@@ -1,0 +1,19 @@
+[HEADER]
+id: wounded_wake
+title: In The Wounded Wake
+ascii_art: ../art/depths_wake_anim.txt
+
+[CONTENT]
+Dark water blooms with ink and sparks from shattered lantern glass.
+The beast recoils, but it is still hunting.
+
+[OPTIONS]
+dive_shrine | Follow the ink-trail to a stone shrine -> ./shrine.level
+strike_heart | Dive now and strike the heart-sack -> ../endings/hunter_glory.level
+
+[DIRECTIVES]
+input_mode: choice
+ascii_art_mode: animated
+
+[OPTION_CONDITIONS]
+option=strike_heart requires_flag=kraken_wounded

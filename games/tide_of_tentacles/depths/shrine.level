@@ -1,0 +1,20 @@
+[HEADER]
+id: tide_shrine
+title: Shrine Of Eight Knots
+ascii_art: ../art/octopus_shrine_anim.txt
+
+[CONTENT]
+An ancient octopus coils around a coral altar, each arm marked in gold ink.
+It offers one pact: power through blood, or safe passage through oath.
+
+[OPTIONS]
+blood_pact | Offer steel and claim the Leviathan Crown -> ../endings/crown_victory.level
+oath_pact | Offer rum and swear to guard the reef -> ../endings/reef_alliance.level
+
+[DIRECTIVES]
+input_mode: choice
+ascii_art_mode: animated
+
+[OPTION_CONDITIONS]
+option=blood_pact requires_flag=kraken_wounded
+option=oath_pact requires_flag=octopus_favor

@@ -1,0 +1,18 @@
+[fps=3]
+[frame]
+[color=bright_white]        __|__ |___| |\
+[color=bright_white]        |o__| |___| | \
+[color=bright_white]        |___| |___| |o \
+[color=bright_yellow]       _|___| |___| |__o\
+[color=bright_cyan]      /...\_____|___|_____\_/
+[color=bright_green]      \  o * o * * o o    /
+[color=bright_blue]    ~~~~~~~~~~~~^~~~~~~~~~~~~~~^
+[frame]
+[color=bright_white]        __|__ |___| |\
+[color=bright_white]        |o__| |___| | \
+[color=bright_white]        |___| |___| |o \
+[color=bright_yellow]       _|___| |___| |__o\
+[color=bright_cyan]      /...\_____|___|_____\_/
+[color=bright_green]      \  o * o * * o o    /
+[color=bright_blue]      ~~~~~~~~^~~~~~~~~~~~~~^~~
+

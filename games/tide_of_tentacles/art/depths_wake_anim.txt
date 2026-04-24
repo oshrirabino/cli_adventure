@@ -1,0 +1,31 @@
+[fps=3]
+[frame]
+[color=bright_blue]                                   /^^^/           /]
+[color=bright_blue]                                  /   ]           / ]
+[color=bright_cyan]       O                  _______/    ]___       /  ]
+[color=bright_cyan]                         /                \_____/   /
+[color=bright_cyan]    O                  _/   [@]  \ \                \
+[color=bright_magenta]            ___//_    /..         | |                ]
+[color=bright_magenta]     o     /o )   \/   VVVvvv\    | |         _/\    ]
+[color=bright_magenta]       O<  )___\\_/\         |               /    \  ]
+[color=bright_blue]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[frame]
+[color=bright_blue]                                   /^^^/           /]
+[color=bright_blue]                                  /   ]           / ]
+[color=bright_cyan]      O                  _______/    ]___       /  ]
+[color=bright_cyan]                         /                \_____/   /
+[color=bright_cyan]   O                   _/   [@]  \ \                \
+[color=bright_magenta]            ___//_    /..         | |                ]
+[color=bright_magenta]      o    /o )   \/   VVVvvv\    | |         _/\    ]
+[color=bright_magenta]        O< )___\\_/\         |               /    \  ]
+[color=bright_blue] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[frame]
+[color=bright_blue]                                   /^^^/           /]
+[color=bright_blue]                                  /   ]           / ]
+[color=bright_cyan]       O                  _______/    ]___       /  ]
+[color=bright_cyan]                         /                \_____/   /
+[color=bright_cyan]    O                  _/   [@]  \ \                \
+[color=bright_magenta]            ___//_    /..         | |                ]
+[color=bright_magenta]     o     /o )   \/   VVVvvv\    | |         _/\    ]
+[color=bright_magenta]       O<  )___\\_/\         |               /    \  ]
+[color=bright_blue]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

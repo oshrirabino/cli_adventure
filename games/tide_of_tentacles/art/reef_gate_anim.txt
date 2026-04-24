@@ -1,0 +1,28 @@
+[fps=3]
+[frame]
+[color=bright_cyan]          ___
+[color=bright_cyan]         / o \
+[color=bright_cyan]    __   \   /   _
+[color=bright_magenta]      \__/ | \__/ \
+[color=bright_magenta]     \___//|\\___/\
+[color=bright_magenta]      ___/ | \___
+[color=bright_magenta]           |     \
+[color=bright_blue]   ~~~~~~~~~~~~~~~~~~~~~~~~~
+[frame]
+[color=bright_cyan]          ___
+[color=bright_cyan]         / o \
+[color=bright_cyan]    __   \   /   _
+[color=bright_magenta]      \__/ | \__/ \
+[color=bright_magenta]    \___// | \\___/\
+[color=bright_magenta]      ___/  |  \___
+[color=bright_magenta]            |     \
+[color=bright_blue]    ~~~~~~~~~~~~~~~~~~~~~~~~
+[frame]
+[color=bright_cyan]          ___
+[color=bright_cyan]         / o \
+[color=bright_cyan]    __   \   /   _
+[color=bright_magenta]      \__/ | \__/ \
+[color=bright_magenta]     \___//|\\___/\
+[color=bright_magenta]      ___/ | \___
+[color=bright_magenta]           |     \
+[color=bright_blue]   ~~~~~~~~~~~~~~~~~~~~~~~~~

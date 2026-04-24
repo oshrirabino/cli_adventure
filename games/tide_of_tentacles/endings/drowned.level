@@ -1,0 +1,11 @@
+[HEADER]
+id: drowned
+title: Reef-Bound Grave
+
+[CONTENT]
+You turn to flee, but the current pins you against the reef stone.
+Your lantern dies. The dark keeps you.
+
+[DIRECTIVES]
+input_mode: endgame
+result: game_over

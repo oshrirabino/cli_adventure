@@ -178,6 +178,18 @@ void Renderer::clear_last_scene(std::ostream& out, std::size_t extra_lines_after
   out.flush();
 }
 
+void Renderer::record_last_scene_lines(std::size_t rendered_lines) const {
+  last_scene_lines_ = rendered_lines;
+}
+
+void Renderer::set_menu_render_hooks(const MenuRenderHooks* hooks) const {
+  menu_render_hooks_ = hooks;
+}
+
+const MenuRenderHooks* Renderer::menu_render_hooks() const {
+  return menu_render_hooks_;
+}
+
 void Renderer::render_victory(std::ostream& out) const {
   out << "\n" << colorize("[Victory]", theme_.victory_color) << "\n";
 }

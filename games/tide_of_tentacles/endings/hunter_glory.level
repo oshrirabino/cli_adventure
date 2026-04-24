@@ -1,0 +1,11 @@
+[HEADER]
+id: hunter_glory
+title: Hunter Of The Black Deep
+
+[CONTENT]
+Your blade finds the heart-sack and the monster falls silent.
+The crew names you captain before dawn.
+
+[DIRECTIVES]
+input_mode: endgame
+result: victory

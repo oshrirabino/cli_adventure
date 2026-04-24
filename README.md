@@ -81,6 +81,14 @@ go_right | Open the right door -> ./right.level
 input_mode: choice
 ```
 
+To mark a level as animated ASCII art, add:
+
+```text
+[DIRECTIVES]
+input_mode: choice
+ascii_art_mode: animated
+```
+
 ### Minimal Endgame Level
 
 ```text
@@ -163,6 +171,25 @@ In ASCII art files referenced by `ascii_art`, each line can optionally start wit
 - If a whole-file default is set, untagged lines use that color.
 - Per-line `[color=...]` tags override the whole-file default for that line.
 - Color names match the theme color names in `themes/README.md`.
+
+## ASCII Art Animation
+
+When `ascii_art_mode: animated` is set in a level's `[DIRECTIVES]`, the engine treats
+the `ascii_art` file as an animation file.
+
+Animation file format:
+
+```text
+[fps=12]
+[frame]
+first frame lines...
+[frame]
+second frame lines...
+```
+
+- `fps` controls frame rate (frames per second).
+- `[frame]` starts a new frame.
+- In non-interactive output (tests/pipes), only the last frame is rendered.
 
 ## Validate A Game
 

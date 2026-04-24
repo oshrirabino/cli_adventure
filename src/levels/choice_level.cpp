@@ -73,10 +73,14 @@ void ChoiceLevel::execute(std::istream& in, std::ostream& out,
       is_interactive
           ? "Use Up/Down arrows and Enter to choose:"
           : "Interactive menu unavailable; use number input:";
+  const adventure::ui::MenuRenderHooks* menu_hooks = renderer_.menu_render_hooks();
 
   try {
+    if (is_interactive && menu_hooks != nullptr) {
+      renderer_.clear_last_scene(out, 0);
+    }
     const adventure::ui::MenuSelection selection =
-        adventure::ui::pick_option(in, out, labels, prompt, renderer_.theme());
+        adventure::ui::pick_option(in, out, labels, prompt, renderer_.theme(), menu_hooks);
     if (is_interactive) {
       renderer_.clear_last_scene(out, selection.rendered_lines);
     }

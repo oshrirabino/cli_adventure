@@ -1,7 +1,7 @@
 [HEADER]
 id: start
 title: Cell Block A
-ascii_art: ./art/cell.txt
+ascii_art: ./art/cell_animated.txt
 
 [CONTENT]
 You wake in a damp stone cell lit by pale moonlight.
@@ -17,6 +17,7 @@ whisper_wall | Whisper to the cracked wall -> ./riddle.level
 
 [DIRECTIVES]
 input_mode: choice
+ascii_art_mode: animated
 
 [OPTION_CONDITIONS]
 option=open_gate requires_flag=got_iron_key

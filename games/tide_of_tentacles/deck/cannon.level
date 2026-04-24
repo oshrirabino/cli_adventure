@@ -1,0 +1,19 @@
+[HEADER]
+id: cannon_run
+title: Chainshot Against The Deep
+ascii_art: ../art/kraken_attack_anim.txt
+
+[CONTENT]
+A tentacle crashes over the rail, slick with barnacles and teeth.
+The gunner screams for a target call.
+
+[OPTIONS]
+fire_chain | Fire chainshot through the tendons -> ../depths/wake.level
+miss_shot | Panic and fire too early -> ../endings/dragged.level
+
+[DIRECTIVES]
+input_mode: choice
+ascii_art_mode: animated
+
+[OPTION_EFFECTS]
+option=fire_chain add_flag=kraken_wounded

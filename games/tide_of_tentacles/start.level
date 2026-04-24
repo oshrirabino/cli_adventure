@@ -1,0 +1,17 @@
+[HEADER]
+id: squall_deck
+title: Blackwake In The Squall
+ascii_art: ./art/storm_deck_anim.txt
+
+[CONTENT]
+Rain lashes the deck of the Blackwake while pirate songs break into shouts.
+Ahead, a reef glows with cold blue fire.
+Below, something vast circles the keel.
+
+[OPTIONS]
+hold_line | Hold the line and load chainshot -> ./deck/cannon.level
+dive_reef | Dive for the glowing reef gate -> ./reef/gate.level
+
+[DIRECTIVES]
+input_mode: choice
+ascii_art_mode: animated

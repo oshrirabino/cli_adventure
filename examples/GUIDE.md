@@ -51,8 +51,8 @@ Notes:
 - Option format with explicit ID (recommended for memory rules):
   - `option_id | Text -> relative/path.level`
 - Relative paths are resolved from the current level file location.
-- Optional ASCII art in header:
-  - `ascii_art: ./art/room.txt`
+  - Optional ASCII art in header:
+    - `ascii_art: ./art/room.txt`
   - Path is resolved relative to the current level file.
   - ASCII art files can color specific lines with tags:
     - `[color=bright_cyan]line text`
@@ -64,6 +64,15 @@ Notes:
     - `[art_color=bright_cyan]` (alias)
   - Lines without a color tag use theme `body_color`.
   - If default color is set, untagged lines use that default.
+  - To render animated ASCII, set:
+    - `[DIRECTIVES]`
+    - `ascii_art_mode: animated`
+  - Animated art file format:
+    - `[fps=12]`
+    - `[frame]`
+    - `...frame 1 lines...`
+    - `[frame]`
+    - `...frame 2 lines...`
 
 ### Memory and conditional options
 
