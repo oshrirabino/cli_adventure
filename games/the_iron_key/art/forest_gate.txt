@@ -4,5 +4,5 @@
       /\  / /\ \  /\
      /  \/ /  \ \/  \
     /                \
-[color=bright_green]   /    EBONWOOD GATE   \
+[color=bright_green]   /    EBONWOOD GATE \
 [color=bright_black]  /____________________\
